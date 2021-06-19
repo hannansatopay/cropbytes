@@ -67,6 +67,16 @@ p {
   margin: 0px;
 }
 
+.trade {
+  background: url('assets/rectangle.png');
+  background-size: 150% 100%;
+  margin-top: -200px;
+}
+
+.cbxtoken {
+  margin-top: 0px;
+}
+
 @media (min-width: 768px) {
   .navbar .container-fluid {
     flex-direction: inherit;
@@ -123,6 +133,16 @@ p {
     padding-right: 6em!important;
     margin: 0px;
   }
+
+  .trade {
+    background: url('assets/rectangle.png');
+    background-size: 100% 100%;
+    margin-top: -250px;
+  }
+
+  .cbxtoken {
+    margin-top: -250px;
+  }  
 
   .testimonials, .news {
     overflow: hidden;
