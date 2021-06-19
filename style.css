@@ -47,7 +47,17 @@ p {
 .playnow {
   position: absolute;
   right: 10px;
+  top: 30px;
 }
+
+/* .navbar-collapse.show {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 100px;
+  width: 100vw;
+  background: white;
+} */
 
 @media (min-width: 768px) {
   .navbar .container-fluid {
@@ -57,8 +67,16 @@ p {
 
   .playnow {
     position: inherit;
-    right: 10px;
   }
+
+  /* .navbar-collapse.show {
+    position: inherit;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    width: 100vw;
+    background: white;
+  } */
 
   .container-fluid {
     padding-left: 8em!important;
