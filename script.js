@@ -52,8 +52,8 @@ new Swiper('.testimonials', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 1.4,
-  spaceBetween: 10,
+  slidesPerView: 1.1,
+  spaceBetween: 5,
   breakpoints: {
     640: {
       slidesPerView: 3,
