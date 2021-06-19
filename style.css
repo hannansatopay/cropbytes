@@ -7,6 +7,13 @@ body {
   overflow-x: hidden;
 }
 
+button:focus {
+  /* outline: none; */
+  border-color: inherit !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 h1 {
   font-size: 32px;
 }
@@ -50,11 +57,12 @@ p {
   top: 30px;
 }
 
-/* .navbar-collapse.show {
+/* .navbar-collapse.show, .navbar-collapse.collapsing {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 100px;
+  top: 95px;
+  height: 100vh;
   width: 100vw;
   background: white;
 } */
