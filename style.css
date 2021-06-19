@@ -77,6 +77,14 @@ p {
   margin-top: 0px;
 }
 
+.arrow {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: -30px;
+  bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .navbar .container-fluid {
     flex-direction: inherit;
@@ -142,7 +150,15 @@ p {
 
   .cbxtoken {
     margin-top: -250px;
-  }  
+  }
+
+  .arrow {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    right: -40px;
+    bottom: 20px; 
+  }
 
   .testimonials, .news {
     overflow: hidden;

@@ -19,7 +19,7 @@ new Swiper('.featured', {
   }
 });
 
-new Swiper('.economy', {
+let economy = new Swiper('.economy', {
   loop: false,
   slidesPerView: 2.1,
   spaceBetween: 10,
@@ -29,6 +29,10 @@ new Swiper('.economy', {
       spaceBetween: 10
     }
   }
+});
+
+$(".arrow").click(function() {
+  economy.slideNext();
 });
 
 new Swiper('.news', {
