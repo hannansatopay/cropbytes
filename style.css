@@ -39,7 +39,27 @@ p {
   font-size: 50px;
 }
 
+.navbar .container-fluid {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.playnow {
+  position: absolute;
+  right: 10px;
+}
+
 @media (min-width: 768px) {
+  .navbar .container-fluid {
+    flex-direction: inherit;
+    justify-content: space-between;
+  }
+
+  .playnow {
+    position: inherit;
+    right: 10px;
+  }
+
   .container-fluid {
     padding-left: 8em!important;
     padding-right: 8em!important;

@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({once: true});
+});
+
 new Swiper('.hero', {
   loop: false,
   slidesPerView: 1
