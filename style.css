@@ -8,15 +8,15 @@ body {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 32px;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 24px;
 }
 
 h4 {
@@ -24,7 +24,7 @@ h4 {
 }
 
 h5 {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 h6 {
@@ -35,11 +35,47 @@ p {
   font-size: 18px;
 }
 
+.huge {
+  font-size: 50px;
+}
+
 @media (min-width: 768px) {
   .container-fluid {
     padding-left: 8em!important;
     padding-right: 8em!important;
     margin: 0px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  h3 {
+    font-size: 40px;
+  }
+  
+  h4 {
+    font-size: 32px;
+  }
+  
+  h5 {
+    font-size: 24px;
+  }
+  
+  h6 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  .huge {
+    font-size: 70px;
   }
 }
 
