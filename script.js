@@ -21,7 +21,7 @@ new Swiper('.featured', {
 
 new Swiper('.economy', {
   loop: false,
-  slidesPerView: 1.5,
+  slidesPerView: 2.1,
   spaceBetween: 10,
   breakpoints: {
     640: {

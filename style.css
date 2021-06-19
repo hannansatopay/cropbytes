@@ -28,7 +28,7 @@ h5 {
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 p {
@@ -59,8 +59,12 @@ p {
   background: white;
 } */
 
-.testimonials {
+.testimonials, .news {
   overflow: visible;
+}
+
+.container-fluid {
+  margin: 0px;
 }
 
 @media (min-width: 768px) {
@@ -120,7 +124,7 @@ p {
     margin: 0px;
   }
 
-  .testimonials {
+  .testimonials, .news {
     overflow: hidden;
   }
 }
