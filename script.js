@@ -9,7 +9,7 @@ new Swiper('.hero', {
 
 new Swiper('.featured', {
   loop: false,
-  slidesPerView: 1,
+  slidesPerView: 2.5,
   spaceBetween: 10,
   breakpoints: {
     640: {
@@ -25,7 +25,7 @@ let economy = new Swiper('.economy', {
   spaceBetween: 10,
   breakpoints: {
     640: {
-      slidesPerView: 5,
+      slidesPerView: 7,
       spaceBetween: 10
     }
   }

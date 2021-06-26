@@ -3,8 +3,17 @@
   --swiper-pagination-color: black;
 }
 
+@font-face {
+  font-family: Circular Std;
+  src: url(assets/fonts/circularstd-book.otf);
+}
+
 body {
   overflow-x: hidden;
+}
+
+.alternate-font {
+  font-family: Circular Std !important;
 }
 
 button:focus {
@@ -133,7 +142,8 @@ p {
   }
   
   h6 {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 16px;
   }
   
   p {
@@ -202,6 +212,7 @@ p {
 
 .nav-link {
   font-size: 16px;
+  color: #302F2F !important;
 }
 
 .floating {  
@@ -235,4 +246,12 @@ p {
 
 .economy .swiper-slide:nth-child(5) .floating {
   animation-delay: 0.5s;
+}
+
+.text-dark {
+  color: black !important;
+}
+
+.text-black {
+  color: #1D293F;
 }
