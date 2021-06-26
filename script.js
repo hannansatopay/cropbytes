@@ -66,6 +66,32 @@ new Swiper('.testimonials', {
   }
 });
 
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+const options = {
+  duration: 1.5,
+};
+
+let once = 0;
+
+$(window).on('resize scroll load', function(){
+  if ($('#totaldownloads').isInViewport() && once == 0) {
+    once = 1;
+    let totalreach = new countUp.CountUp('totalreach', 60000, options);
+    let totaldownloads = new countUp.CountUp('totaldownloads', 45, options);
+    totalreach.start();
+    totaldownloads.start();
+  } 
+});
+
 let mybutton = document.getElementById("btn-back-to-top");
 
 window.onscroll = function () {
