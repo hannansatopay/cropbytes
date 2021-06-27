@@ -1,3 +1,6 @@
+// $(".not-loggedIn").addClass("d-none");
+// $(".loggedIn").removeClass("d-none");
+
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({once: true});
 });

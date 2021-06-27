@@ -13,13 +13,14 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white py-3">
-            <div class="container-fluid px-4">
-                <a class="navbar-brand fw-bold" href="#" style="max-width: 200px;"><img src="assets/logo.png" class="w-100"></a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
-                <span class="navbar-toggler-icon"></span>
+        <header class="navbar navbar-expand-lg navbar-light sticky-top bg-white py-3" style="z-index: 99999;">
+            <div class="container-fluid px-4 justify-content-start">
+                <button class="navbar-toggler border-0 ps-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <img src="assets/icon-menu.svg" class="w-100 menu">
+                    <img src="assets/icon-close.svg" class="w-100 close">
                 </button>
-                <div class="collapse navbar-collapse" id="navbar">
+                <a class="navbar-brand fw-bold" href="#" style="max-width: 200px;"><img src="assets/logo.png" class="w-75 w-md-100"></a>
+                <div class="collapse navbar-collapse d-none d-md-block">
                     <ul class="navbar-nav m-auto w-100 justify-content-evenly">
                         <li class="nav-item">
                             <a class="nav-link" href="#">About Us</a>
@@ -42,25 +43,67 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/blog">Blog</a>
                         </li>
-                        <!-- <li class="nav-item d-flex d-md-none">
-                            <a class="nav-link" href="#">Hello, Friend</a>
-                        </li> -->
                     </ul>
                 </div>
-                <button type="button" class="btn btn-dark rounded-pill p-md-2 px-md-4 px-xxl-5 mx-3 playnow">Play Game</button>
-                <div class="d-none d-md-block">
+                <button type="button" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-3 playnow">Play Now</button>
+                <div class="d-none d-md-flex align-items-center">
                     <img src="assets/avatar.png" style="max-height: 45px;">
-                    <span class="fw-bold text-black">Hello, Friend!</span>
+                    <div class="ms-1">
+                        <span class="fw-bold text-black">Hello, Friend!</span>
+                        <span class="fw-bold text-black d-none loggedIn" style="font-size: 12px; display: block;"><img src="assets/trx.png" style="width: 10px;"> 1084.114 <span style="color: #827E7E;">TRX</span></span>
+                    </div>
                 </div>
             </div>
         </header>
+
+        <div class="collapse navbar-collapse vh-100 vw-100 bg-white position-fixed" id="navbar"  style="z-index: 9999;">
+            <ul class="navbar-nav m-auto w-100 justify-content-evenly mt-4">
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="#"><img src="assets/icon-heart.svg" class="me-2"> About Us</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> How To Play</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2"> NFT</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> Trade Center</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/store"><img src="assets/icon-shop.svg" class="me-2"> Shop</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/faq"><img src="assets/icon-help.svg" class="me-2"> Help</a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> Blog</a>
+                </li>
+                <li class="nav-item mx-4 my-2 d-none loggedIn">
+                    <a class="nav-link" href="/profile"><img src="assets/icon-profile.svg" class="me-2"> My Profile</a>
+                </li>
+            </ul>
+            <div class="position-fixed w-100" style="bottom: 0;">
+                <div class="w-100" style="background: #FFDA3A;height: 150px;">
+                    <div class="row h-100">
+                        <div class="col-7 d-flex flex-column justify-content-center p-4">
+                            <span class="fw-bold text-black">Hello, Friend!</span>
+                            <span class="fw-bold text-black d-none loggedIn" style="font-size: 12px; display: block;"><img src="assets/trx.png" style="width: 10px;"> 1084.114 <span style="color: #827E7E;">TRX</span></span>
+                        </div>
+                        <div class="col-5" style="position: absolute; top: -50px; right: 0;">
+                            <img src="assets/avatar.png" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <main>
             <div class="row m-0 mb-4" data-aos="fade-down">
                 <div class="swiper-container hero">
                     <div class="swiper-wrapper w-100">
                         <div class="swiper-slide row m-0 w-100">
-                            <div class="col-12 col-md-6 p-4 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
+                            <div class="col-12 col-md-6 p-4 pt-5 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
                                 <h1 class="fw-bold text-black" style="max-width: 500px;">Play & Earn Crypto!</h1>
                                 <h5 class="mb-4 text-dark">Grow your portfolio of assets in your very own farm, using NFTs and cryptocurrencies with Cropbytes.  The most trusted crypto game since 2018.</h5>
                                 <div class="d-none d-md-flex">
@@ -101,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="row text-center container-fluid p-5 my-5" style="background: #F5F4F4;">
+            <div class="row text-center container-fluid p-5 my-4 my-md-5" style="background: #F5F4F4;">
                 <h5 class="mb-4">Also featured in:</h5>
                 <div class="swiper-container featured" style="overflow: visible;">
                     <div class="swiper-wrapper">
@@ -110,6 +153,54 @@
                         <div class="swiper-slide d-flex align-items-center"><a href="https://egamers.io/crop-bytes-to-launch-cbx-token/" target="_blank"><img src="assets/logo-3.png" class="w-100"></a></div>
                         <div class="swiper-slide d-flex align-items-center"><a href="https://markets.businessinsider.com/currencies/news/electronic-arts-jokes-invest-crypto-justin-sun-promotes-tron-games-2019-9-1028540345" target="_blank"><img src="assets/597a0306b50ab126008b4b46 1.png" class="w-100"></a></div>
                         <div class="swiper-slide d-flex align-items-center"><a href="https://trontv.com/#!/m/QdjWj6Ho/cropbytes-play-earn-crypto-trailer?list=XrSJ6ZNj" target="_blank"><img src="assets/featured in-tron tv 1.png" class="w-100"></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row container-fluid py-2 py-md-5 text-center d-none loggedIn">
+                <h4 class="fw-bold">What's New?</h4>
+                <h5>A round up of the latest news and releases.</h5>
+                <img src="assets/banner.png" class="w-100 p-0">
+                <div class="swiper-container news">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/news1.png" class="card-img-top mb-3">
+                            <h5 class="card-title text-start alternate-font">Press Release</h5>
+                            <h5 class="text-start"><a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/news2.png" class="card-img-top mb-3">
+                            <h5 class="card-title text-start alternate-font">In the news</h5>
+                            <h5 class="text-start"><a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/news3.png" class="card-img-top mb-3">
+                            <h5 class="card-title text-start alternate-font">Latest Releases!</h5>
+                            <h5 class="text-start"><a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/news4.png" class="card-img-top mb-3">
+                            <h5 class="card-title text-start alternate-font">Podcast</h5>
+                            <h5 class="text-start"><a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/news5.png" class="card-img-top mb-3">
+                            <h5 class="card-title text-start alternate-font">Fishing Mini-game</h5>
+                            <h5 class="text-start"><a href="https://blog.cropbytes.com/fishing-mini-game/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5 p-2 pb-4 d-none flex-md-row-reverse loggedIn">
+                <div class="col-12 col-md-6 p-0">
+                    <img src="assets/Group 7013.png" class="w-100 d-none d-md-block">
+                    <img src="assets/Group 7012.png" class="w-100 d-block d-md-none">
+                </div>
+                <div class="col-12 col-md-6 px-4 d-flex align-items-center text-fluid">
+                    <div>
+                        <h2 class="fw-bold text-alternate-black my-3">Earn upto 2000 TRX with every Referral Completion*</h2>
+                        <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Copy Referral Code</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +216,8 @@
                                 <div class="card-body">
                                     <h3 class="card-title fw-bold">Crypto World</h3>
                                     <h5 class="card-text">Learn how to use assets to grow your very own <strong>#Cryptofarm</strong> into a sucessful crypto business.</h5>
-                                    <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">How to Play</a>
+                                    <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4 not-loggedIn">How to Play</a>
+                                    <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4 d-none loggedIn">View my Assets</a>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +236,8 @@
                                 <div class="card-body text-white text-end text-md-start">
                                     <h3 class="card-title fw-bold" style="color: #8BF99C;">Earn & Trade In CBX</h3>
                                     <h5 class="card-text">A virtual world when you can play, contribute to the ecocystem and earn CBX tokens.</h5>
-                                    <a href="/exchange" class="btn mt-2 mt-md-4 rounded-pill p-2 px-4" style="background: #8BF99C;">View Trade Centre</a>
+                                    <a href="/exchange" class="btn mt-2 mt-md-4 rounded-pill p-2 px-4 not-loggedIn" style="background: #8BF99C;">View Trade Centre</a>
+                                    <a href="/exchange" class="btn mt-2 mt-md-4 rounded-pill p-2 px-4 d-none loggedIn" style="background: #8BF99C;">Trade Now</a>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="row py-md-5 mx-2 text-center" style="display: flex; justify-content: center;">
+            <div class="row py-md-5 mx-2 text-center not-loggedIn" style="display: flex; justify-content: center;">
                 <div class="container-fluid py-4">
                     <img src="assets/coins.png" class="mb-4 mb-md-5 w-50 w-md-25">
                     <h3 class="fw-bold">A Balanced Economy</h3>
@@ -251,7 +344,7 @@
                 </div>
             </div>
 
-            <div class="row container-fluid py-2 py-md-5 text-center">
+            <div class="row container-fluid py-2 py-md-5 text-center not-loggedIn">
                 <h4 class="fw-bold">What's New?</h4>
                 <h5>A round up of the latest news and releases.</h5>
                 <img src="assets/banner.png" class="w-100 p-0">
