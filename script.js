@@ -92,6 +92,16 @@ $(window).on('resize scroll load', function(){
   } 
 });
 
+$("body").find('[data-bs-toggle="modal"]').click(function() {
+  let toggle = $(this);
+  let src = toggle.attr("data-bs-video")+"?modestbranding=1&autohide=1&rel=0&showinfo=0&html5=1&autoplay=1"; 
+  $(toggle.attr("data-bs-target")+' iframe').attr('src', src);
+
+  $("#video").on('hidden.bs.modal', function (e) {
+    $("#video iframe").attr("src", toggle.attr("data-bs-video"));
+  });
+});
+
 let mybutton = document.getElementById("btn-back-to-top");
 
 window.onscroll = function () {

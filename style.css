@@ -12,6 +12,24 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 768px) {
+  .w-md-100 {
+    width: 100% !important;
+  }
+
+  .w-md-75 {
+    width: 75% !important;
+  }
+
+  .w-md-50 {
+    width: 50% !important;
+  }
+
+  .w-md-25 {
+    width: 25% !important;
+  }
+}
+
 .alternate-font {
   font-family: Circular Std !important;
 }
@@ -66,6 +84,19 @@ p {
   top: 30px;
 }
 
+.hero:after {
+  content: '';
+  background: #FFDA3A;
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  top: auto;
+  bottom: 15%;
+  left: 0px;
+  right: auto;
+  z-index: -1;
+}
+
 /* .navbar-collapse.show, .navbar-collapse.collapsing {
   position: absolute;
   left: 0px;
@@ -94,6 +125,10 @@ p {
   margin-top: 0px;
 }
 
+.cryptoworld {
+  margin-top: 0px;
+}
+
 .arrow {
   position: absolute;
   width: 45px;
@@ -102,7 +137,15 @@ p {
   bottom: 20px;
 }
 
+.download img {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
+  .download img {
+    width: 50%;
+  }
+
   .navbar .container-fluid {
     flex-direction: inherit;
     justify-content: space-between;
@@ -160,6 +203,23 @@ p {
     margin: 0px;
   }
 
+  .text-fluid {
+    padding-left: 6em!important;
+  }  
+
+  .hero:after {
+    content: '';
+    background: #FFDA3A;
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    top: 0px;
+    bottom: auto;
+    left: auto;
+    right: 0px;
+    z-index: -1;
+  }
+
   .trade {
     background: url('assets/rectangle.png');
     background-size: 100% 100%;
@@ -167,7 +227,11 @@ p {
   }
 
   .cbxtoken {
-    margin-top: -250px;
+    margin-top: -200px;
+  }
+
+  .cryptoworld {
+    margin-top: -50px;
   }
 
   /* .arrow {
@@ -202,6 +266,10 @@ p {
     padding-left: 8em!important;
     padding-right: 8em!important;
   }
+
+  .text-fluid {
+    padding-left: 8em!important;
+  } 
 }
 
 #btn-back-to-top {
@@ -268,6 +336,10 @@ p {
 
 .text-black {
   color: #1D293F;
+}
+
+.text-alternate-black {
+  color: #302F2F;
 }
 
 .collapsed i {
