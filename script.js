@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 new Swiper('.hero', {
   loop: false,
-  slidesPerView: 1
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
 });
 
 new Swiper('.featured', {
@@ -23,7 +27,7 @@ new Swiper('.featured', {
 });
 
 let economy = new Swiper('.economy', {
-  loop: false,
+  loop: true,
   slidesPerView: 2.1,
   spaceBetween: 10,
   breakpoints: {
@@ -51,9 +55,10 @@ new Swiper('.news', {
 });
 
 new Swiper('.testimonials', {
-  loop: false,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -79,17 +84,13 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-const options = {
-  duration: 1.5,
-};
-
 let once = 0;
 
 $(window).on('resize scroll load', function(){
   if ($('#totaldownloads').isInViewport() && once == 0) {
     once = 1;
-    let totalreach = new countUp.CountUp('totalreach', 60000, options);
-    let totaldownloads = new countUp.CountUp('totaldownloads', 45, options);
+    let totalreach = new countUp.CountUp('totalreach', 60000, {duration: 1, suffix: '+'});
+    let totaldownloads = new countUp.CountUp('totaldownloads', 45, {duration: 1.5, suffix: 'k'});
     totalreach.start();
     totaldownloads.start();
   } 

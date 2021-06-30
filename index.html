@@ -14,28 +14,43 @@
     </head>
     <body>
         <header class="navbar navbar-expand-lg navbar-light sticky-top bg-white py-3" style="z-index: 99999;">
-            <div class="container-fluid px-4 justify-content-start">
+            <div class="container-fluid px-4 justify-content-start flex-nowrap">
                 <button class="navbar-toggler border-0 ps-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                     <img src="assets/icon-menu.svg" class="w-100 menu">
                     <img src="assets/icon-close.svg" class="w-100 close">
                 </button>
-                <a class="navbar-brand fw-bold" href="#" style="max-width: 200px;"><img src="assets/logo.png" class="w-75 w-md-100"></a>
+                <a class="navbar-brand fw-bold" style="min-width: 150px;" href="/"><img src="assets/logo.png" class="w-100"></a>
                 <div class="collapse navbar-collapse d-none d-md-block">
                     <ul class="navbar-nav m-auto w-100 justify-content-evenly">
-                        <li class="nav-item">
+                        <li class="nav-item d-none">
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/how-to-play">How To Play</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/nfts">NFT</a>
+                            <a class="nav-link not-loggedIn" href="/nfts">NFT</a>
+                            <div class="dropdown d-none loggedIn">
+                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                    NFT & Breeding
+                                </a>  
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/nfts">NFT</a></li>
+                                    <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/exchange">Trade Center</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/store">Shop</a>
+                        </li>
+                        <li class="nav-item d-none loggedIn">
+                            <a class="nav-link" href="/game-assets">Assets</a>
+                        </li>
+                        <li class="nav-item d-none loggedIn">
+                            <a class="nav-link" href="/gc-conversion">GC Conversion</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/faq">Help</a>
@@ -45,12 +60,22 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-3 playnow">Play Now</button>
+                <a href="/login" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a>
+                <a href="/farm-view" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a>
                 <div class="d-none d-md-flex align-items-center">
                     <img src="assets/avatar.png" style="max-height: 45px;">
                     <div class="ms-1">
                         <span class="fw-bold text-black">Hello, Friend!</span>
                         <span class="fw-bold text-black d-none loggedIn" style="font-size: 12px; display: block;"><img src="assets/trx.png" style="width: 10px;"> 1084.114 <span style="color: #827E7E;">TRX</span></span>
+                    </div>
+                    <div class="dropdown d-none d-md-block loggedIn">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu text-center border-0 p-3" style="border-radius: 20px; right: 10px; left: auto; margin-top: 2rem;">
+                          <li><a class="dropdown-item text-dark mb-2" href="/profile">Profile</a></li>
+                          <li><a class="dropdown-item text-dark mb-2" href="/funds">Funds</a></li>
+                          <li><a class="dropdown-item text-dark mb-2" href="/history">History</a></li>
+                          <li><a class="dropdown-item btn-dark rounded-pill" style="color: #fff; background-color: #212529; border-color: #212529;" href="#">Logout</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -58,29 +83,46 @@
 
         <div class="collapse navbar-collapse vh-100 vw-100 bg-white position-fixed" id="navbar"  style="z-index: 9999;">
             <ul class="navbar-nav m-auto w-100 justify-content-evenly mt-4">
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-2 d-none">
                     <a class="nav-link" href="#"><img src="assets/icon-heart.svg" class="me-2"> About Us</a>
                 </li>
                 <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> How To Play</a>
+                    <a class="nav-link" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> <span class="align-middle">How To Play</span></a>
                 </li>
                 <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2"> NFT</a>
+                    <a class="nav-link not-loggedIn" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2">
+                        <span class="align-middle">NFT</span>
+                    </a>
+                    <div class="dropdown d-none loggedIn">
+                        <a class="btn ps-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                            <img src="assets/icon-diamond.svg" class="me-2"> <span class="align-middle">NFT & Breeding</span>
+                        </a>  
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="/nfts">NFT</a></li>
+                            <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> Trade Center</a>
+                    <a class="nav-link" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> <span class="align-middle">Trade Center</span></a>
                 </li>
                 <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/store"><img src="assets/icon-shop.svg" class="me-2"> Shop</a>
-                </li>
-                <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/faq"><img src="assets/icon-help.svg" class="me-2"> Help</a>
-                </li>
-                <li class="nav-item mx-4 my-2">
-                    <a class="nav-link" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> Blog</a>
+                    <a class="nav-link" href="/store"><img src="assets/icon-shop.svg" class="me-2"> <span class="align-middle">Shop</span></a>
                 </li>
                 <li class="nav-item mx-4 my-2 d-none loggedIn">
-                    <a class="nav-link" href="/profile"><img src="assets/icon-profile.svg" class="me-2"> My Profile</a>
+                    <a class="nav-link" href="/game-assets"><img src="assets/icon-assets.svg" class="me-2"> <span class="align-middle">Assets</span></a>
+                </li>
+                <li class="nav-item mx-4 my-2 d-none loggedIn">
+                    <a class="nav-link" href="/gc-conversion"><img src="assets/icon-convert.svg" class="me-2"> <span class="align-middle">GC Conversion</span></a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/faq"><img src="assets/icon-help.svg" class="me-2"> <span class="align-middle">Help</span></a>
+                </li>
+                <li class="nav-item mx-4 my-2">
+                    <a class="nav-link" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> <span class="align-middle">Blog</span></a>
+                </li>
+                <li class="nav-item mx-4 my-2 d-none loggedIn">
+                    <a class="nav-link" href="/profile"><img src="assets/icon-profile.svg" class="me-2"> <span class="align-middle">My Profile</span></a>
                 </li>
             </ul>
             <div class="position-fixed w-100" style="bottom: 0;">
@@ -111,7 +153,7 @@
                                     <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="ps-1" style="width: 200px;"></a>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 p-0 hero">
+                            <div class="col-12 col-md-6 p-0">
                                 <img src="assets/hero_desktop.png" class="w-100 d-none d-md-flex floating" />
                                 <img src="assets/hero_mobile.png" class="w-100 d-flex d-md-none floating" />
                             </div>
@@ -120,7 +162,26 @@
                                 <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="w-100 p-2 pb-4"></a>
                             </div>
                         </div>
+                        <div class="swiper-slide row m-0 w-100">
+                            <div class="col-12 col-md-6 p-4 pt-5 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
+                                <h1 class="fw-bold text-black">Make your NFTs work for you</h1>
+                                <h5 class="mb-4 text-dark">Say hello to NFTs that are rare and also boost your earnings in the game.</h5>
+                                <div class="d-none d-md-flex">
+                                    <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="pe-1" style="width: 200px;"></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="ps-1" style="width: 200px;"></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-0">
+                                <img src="assets/Group 6929.png" class="w-100 d-none d-md-flex floating" />
+                                <img src="assets/Group 6928.png" class="w-100 d-flex d-md-none floating" />
+                            </div>
+                            <div class="d-flex d-md-none">
+                                <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="w-100 p-2 pb-4"></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="w-100 p-2 pb-4"></a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
 
@@ -128,7 +189,7 @@
                 <div class="col-12 col-md-5" data-aos="fade-left">
                     <div class="row">
                         <div class="col-6 p-0 text-center">
-                            <p class="fw-bold m-0 huge text-black"><span id="totaldownloads"></span>k</p>
+                            <p class="fw-bold m-0 huge text-black"><span id="totaldownloads"></span></p>
                             <img src="assets/hearts.png" class="w-50 w-md-75">
                             <p class="mt-2 text-black" style="font-size: 16px;">Downloads</p>
                         </div>
@@ -140,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-7 d-flex align-items-center ps-md-5" data-aos="fade-right">
-                    <h2 class="fw-bold text-alternate-black text-center text-md-start my-3">Trusted by <span id="totalreach"></span>+ happy Crypto Farmers world wide.</h2>
+                    <h2 class="fw-bold text-alternate-black text-center text-md-start my-3">Trusted by <div id="totalreach" style="display: inline-block;"></div> happy Crypto Farmers world wide.</h2>
                 </div>
             </div>
 
@@ -200,7 +261,7 @@
                 <div class="col-12 col-md-6 px-4 d-flex align-items-center text-fluid">
                     <div>
                         <h2 class="fw-bold text-alternate-black my-3">Earn upto 2000 TRX with every Referral Completion*</h2>
-                        <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Copy Referral Code</a>
+                        <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Invite Now</a>
                     </div>
                 </div>
             </div>
@@ -254,6 +315,7 @@
                 <div class="swiper-container economy mt-5" style="overflow: visible;" data-aos="fade-right">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="z-index: 7;">
+                            <img src="assets/arrow.png" class="arrow" style="left: -30px; right: auto;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7002.png" class="card-img-top floating">
                                 <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">GET ASSETS AND START FARMING</h6>
@@ -300,6 +362,7 @@
                                 <img src="assets/Group 7008.png" class="card-img-top floating">
                                 <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">GENERATE RETURNS</h6>
                             </div>
+                            <img src="assets/arrow.png" class="arrow">
                         </div>
                     </div>
                 </div>
@@ -408,7 +471,7 @@
                                     </div>
                                     <div class="col-9 ps-2">
                                         <div class="text-start">
-                                            <p class="card-text">I like farming games, but this is the only game where I have earned bya playing.</p>
+                                            <p class="card-text">I like farming games, but this is the only game where I have earned by playing.</p>
                                             <p class="fw-bold m-0">Deepa Mohan</p>
                                             <p class="fw-bold m-0">CEO & Founder at Gearat</p>
                                         </div>
@@ -466,10 +529,12 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-
-                    <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
                 </div>
+            </div>
+
+            <div class="d-none d-md-block position-relative m-auto" style="top: -190px; width: 97%;">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
             <div class="w-100" style="background: #FFDA3A;height: 200px;margin-top: -200px;"></div>
@@ -573,8 +638,8 @@
             </div>
         </footer>
 
-        <button type="button" class="btn btn-dark rounded-circle btn-floating" id="btn-back-to-top">
-            <i class="fa fa-caret-up"></i>
+        <button type="button" class="btn btn-floating" id="btn-back-to-top">
+            <img src="assets/icon-arrow.svg" class="w-100">
         </button>
 
         <div class="modal fade" id="video" tabindex="-1">
