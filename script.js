@@ -6,16 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 new Swiper('.hero', {
-  loop: false,
+  loop: true,
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
+  },
+  autoplay: {
+    delay: 5000
   }
 });
 
 new Swiper('.featured', {
-  loop: false,
+  loop: true,
   slidesPerView: 2.5,
   spaceBetween: 10,
   breakpoints: {
@@ -23,6 +26,9 @@ new Swiper('.featured', {
       slidesPerView: 5,
       spaceBetween: 40
     }
+  },
+  autoplay: {
+    delay: 2500
   }
 });
 

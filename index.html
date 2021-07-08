@@ -34,7 +34,7 @@
                                 <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                     NFT & Breeding
                                 </a>  
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <ul class="dropdown-menu mx-4">
                                     <li><a class="dropdown-item" href="/nfts">NFT</a></li>
                                     <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
                                 </ul>
@@ -60,8 +60,8 @@
                         </li>
                     </ul>
                 </div>
-                <a href="/login" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a>
-                <a href="/farm-view" class="btn btn-dark rounded-pill p-md-2 px-4 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a>
+                <a href="/login" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a>
+                <a href="/farm-view" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a>
                 <div class="d-none d-md-flex align-items-center">
                     <img src="assets/avatar.png" style="max-height: 45px;">
                     <div class="ms-1">
@@ -81,15 +81,15 @@
             </div>
         </header>
 
-        <div class="collapse navbar-collapse vh-100 vw-100 bg-white position-fixed" id="navbar"  style="z-index: 9999;">
-            <ul class="navbar-nav m-auto w-100 justify-content-evenly mt-4">
-                <li class="nav-item mx-4 my-2 d-none">
+        <div class="collapse navbar-collapse navbar-mobile vh-100 vw-100 bg-white position-fixed" id="navbar" style="z-index: 9999;">
+            <ul class="navbar-nav m-auto w-100 justify-content-evenly mt-3">
+                <li class="nav-item mx-4 my-1 d-none">
                     <a class="nav-link" href="#"><img src="assets/icon-heart.svg" class="me-2"> About Us</a>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> <span class="align-middle">How To Play</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link not-loggedIn" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2">
                         <span class="align-middle">NFT</span>
                     </a>
@@ -97,42 +97,51 @@
                         <a class="btn ps-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                             <img src="assets/icon-diamond.svg" class="me-2"> <span class="align-middle">NFT & Breeding</span>
                         </a>  
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/nfts">NFT</a></li>
                             <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> <span class="align-middle">Trade Center</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link" href="/store"><img src="assets/icon-shop.svg" class="me-2"> <span class="align-middle">Shop</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2 d-none loggedIn">
+                <li class="nav-item mx-4 my-1 d-none loggedIn">
                     <a class="nav-link" href="/game-assets"><img src="assets/icon-assets.svg" class="me-2"> <span class="align-middle">Assets</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2 d-none loggedIn">
+                <li class="nav-item mx-4 my-1 d-none loggedIn">
                     <a class="nav-link" href="/gc-conversion"><img src="assets/icon-convert.svg" class="me-2"> <span class="align-middle">GC Conversion</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link" href="/faq"><img src="assets/icon-help.svg" class="me-2"> <span class="align-middle">Help</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2">
+                <li class="nav-item mx-4 my-1">
                     <a class="nav-link" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> <span class="align-middle">Blog</span></a>
                 </li>
-                <li class="nav-item mx-4 my-2 d-none loggedIn">
-                    <a class="nav-link" href="/profile"><img src="assets/icon-profile.svg" class="me-2"> <span class="align-middle">My Profile</span></a>
+                <li class="nav-item mx-4 my-1 d-none loggedIn">
+                    <div class="dropdown d-none loggedIn">
+                        <a class="btn ps-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                            <img src="assets/icon-profile.svg" class="me-2"> <span class="align-middle">My Profile</span>
+                        </a>  
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="/funds">Funds</a></li>
+                            <li><a class="dropdown-item" href="/history">History</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-            <div class="position-fixed w-100" style="bottom: 0;">
-                <div class="w-100" style="background: #FFDA3A;height: 150px;">
+            <div class="position-fixed w-100" style="bottom: 0; z-index: 9999;">
+                <div class="w-100" style="background: #FFDA3A;height: 100px;">
                     <div class="row h-100">
                         <div class="col-7 d-flex flex-column justify-content-center p-4">
-                            <span class="fw-bold text-black">Hello, Friend!</span>
-                            <span class="fw-bold text-black d-none loggedIn" style="font-size: 12px; display: block;"><img src="assets/trx.png" style="width: 10px;"> 1084.114 <span style="color: #827E7E;">TRX</span></span>
+                            <h2 class="fw-bold text-black">Hello, Friend!</h2>
+                            <h6 class="fw-bold text-black d-none loggedIn"><img src="assets/trx.png" style="width: 20px;"> 1084.114 <span style="color: #827E7E;">TRX</span></h6>
                         </div>
-                        <div class="col-5" style="position: absolute; top: -50px; right: 0;">
+                        <div class="col-5" style="position: absolute; top: -80px; right: 0;">
                             <img src="assets/avatar.png" class="w-100">
                         </div>
                     </div>
@@ -157,10 +166,6 @@
                                 <img src="assets/hero_desktop.png" class="w-100 d-none d-md-flex floating" />
                                 <img src="assets/hero_mobile.png" class="w-100 d-flex d-md-none floating" />
                             </div>
-                            <div class="d-flex d-md-none">
-                                <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="w-100 p-2 pb-4"></a>
-                                <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="w-100 p-2 pb-4"></a>
-                            </div>
                         </div>
                         <div class="swiper-slide row m-0 w-100">
                             <div class="col-12 col-md-6 p-4 pt-5 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
@@ -175,13 +180,14 @@
                                 <img src="assets/Group 6929.png" class="w-100 d-none d-md-flex floating" />
                                 <img src="assets/Group 6928.png" class="w-100 d-flex d-md-none floating" />
                             </div>
-                            <div class="d-flex d-md-none">
-                                <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="w-100 p-2 pb-4"></a>
-                                <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="w-100 p-2 pb-4"></a>
-                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="d-flex d-md-none">
+                    <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="w-100 p-2 pb-4"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="w-100 p-2 pb-4"></a>
                 </div>
             </div>
 
@@ -261,7 +267,7 @@
                 <div class="col-12 col-md-6 px-4 d-flex align-items-center text-fluid">
                     <div>
                         <h2 class="fw-bold text-alternate-black my-3">Earn upto 2000 TRX with every Referral Completion*</h2>
-                        <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Invite Now</a>
+                        <a href="/referral" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Invite Now</a>
                     </div>
                 </div>
             </div>
@@ -318,49 +324,49 @@
                             <img src="assets/arrow.png" class="arrow" style="left: -30px; right: auto;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7002.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">GET ASSETS AND START FARMING</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">GET ASSETS AND START FARMING</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 6;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7003.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">GROW CROPS TO MAKE FOOD</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">GROW CROPS TO MAKE FOOD</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 5;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7004.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">FEED ANIMALS AND GET EXTRACTS</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">FEED ANIMALS AND GET EXTRACTS</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 4;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7005.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">COLLECT UTILITIES TO SELL</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">COLLECT UTILITIES TO SELL</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 3;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7010.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">CONVERT EXTRACTS TO GAME COINS</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">CONVERT EXTRACTS TO GAME COINS</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 2;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7007.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">TRADE ASSETS AND COLLECTIBLES</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">TRADE ASSETS AND COLLECTIBLES</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 1;">
                             <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                                 <img src="assets/Group 7008.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-4 d-flex align-items-center h-100">GENERATE RETURNS</h6>
+                                <h6 class="card-title fw-bolder m-4 p-1 d-flex align-items-center h-100">GENERATE RETURNS IN CRYPTO</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -392,8 +398,8 @@
                             <h5 class="card-title m-2 p-1 text-black">Open Market Trade</h5>
                         </div>
                         <div class="col-4 col-md-6 p-2 p-md-4 text-center">
-                            <img src="assets/unitybasednft.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Unity Based NFT</h5>
+                            <img src="assets/utilitybasednft.png" class="card-img-top w-75 w-md-50">
+                            <h5 class="card-title m-2 p-1 text-black">Utility Based NFT</h5>
                         </div>
                         <div class="col-4 col-md-6 p-2 p-md-4 text-center">
                             <img src="assets/metaverseofgames.png" class="card-img-top w-75 w-md-50">
@@ -414,27 +420,27 @@
                 <div class="swiper-container news">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="assets/news1.png" class="card-img-top mb-3">
+                            <img src="assets/news-1.png" class="card-img-top mb-3">
                             <h5 class="card-title text-start alternate-font">Press Release</h5>
                             <h5 class="text-start"><a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/news2.png" class="card-img-top mb-3">
+                            <img src="assets/news-2.png" class="card-img-top mb-3">
                             <h5 class="card-title text-start alternate-font">In the news</h5>
                             <h5 class="text-start"><a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/news3.png" class="card-img-top mb-3">
+                            <img src="assets/news-3.png" class="card-img-top mb-3">
                             <h5 class="card-title text-start alternate-font">Latest Releases!</h5>
                             <h5 class="text-start"><a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/news4.png" class="card-img-top mb-3">
+                            <img src="assets/news-4.png" class="card-img-top mb-3">
                             <h5 class="card-title text-start alternate-font">Podcast</h5>
                             <h5 class="text-start"><a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/news5.png" class="card-img-top mb-3">
+                            <img src="assets/news-5.png" class="card-img-top mb-3">
                             <h5 class="card-title text-start alternate-font">Fishing Mini-game</h5>
                             <h5 class="text-start"><a href="https://blog.cropbytes.com/fishing-mini-game/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
                         </div>
@@ -472,8 +478,8 @@
                                     <div class="col-9 ps-2">
                                         <div class="text-start">
                                             <p class="card-text">I like farming games, but this is the only game where I have earned by playing.</p>
-                                            <p class="fw-bold m-0">Deepa Mohan</p>
-                                            <p class="fw-bold m-0">CEO & Founder at Gearat</p>
+                                            <p class="fw-bold m-0">Patricia</p>
+                                            <p class="fw-bold m-0">Casual Gamer & Mom</p>
                                         </div>
                                     </div>
                                 </div>
@@ -545,6 +551,13 @@
             <div class="row">
                 <div class="col-12 col-md-4 text-center text-md-start">
                     <img src="assets/logofull.png" class="w-75 mb-3">
+                    <div class="social-icons d-flex w-md-75">
+                        <a href="https://t.me/ccropbytes" target="_blank" class="w-50"><img src="assets/icon-telegram.svg" class="w-100"></a>
+                        <a href="https://www.youtube.com/channel/UCShiuZuJI3mOTyWbr115rRQ?view_as=subscriber" target="_blank" class="w-50"><img src="assets/icon-youtube.svg" class="w-100"></a>
+                        <a href="https://www.linkedin.com/company/cropbytes" target="_blank" class="w-50"><img src="assets/icon-linkedin.svg" class="w-100"></a>
+                        <a href="https://www.facebook.com/cropbytes/" target="_blank" class="w-50"><img src="assets/icon-facebook.svg" class="w-100"></a>
+                        <a href="https://twitter.com/CropBytes" target="_blank" class="w-50"><img src="assets/icon-twitter.svg" class="w-100"></a>
+                    </div>
                     <p class="m-0 alternate-font" style="font-size: 16px;">Bangalore, India</p>
                     <p class="alternate-font" style="font-size: 16px;">support@cropbytes.com</p>
                     <div class="d-flex d-md-block download">
