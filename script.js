@@ -1,6 +1,38 @@
 // $(".not-loggedIn").addClass("d-none");
 // $(".loggedIn").removeClass("d-none");
 
+$(".playnow.not-loggedIn").click(function() {
+  $(".not-loggedIn").addClass("d-none");
+  $(".loggedIn").removeClass("d-none");
+  new Swiper('.news', {
+    loop: false,
+    slidesPerView: 2.5,
+    spaceBetween: 10,
+    breakpoints: {
+      640: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
+});
+
+$(".playnow.loggedIn").click(function() {
+  $(".not-loggedIn").removeClass("d-none");
+  $(".loggedIn").addClass("d-none");
+  new Swiper('.news', {
+    loop: false,
+    slidesPerView: 2.5,
+    spaceBetween: 10,
+    breakpoints: {
+      640: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({once: true});
 });
@@ -13,7 +45,8 @@ new Swiper('.hero', {
     clickable: true
   },
   autoplay: {
-    delay: 5000
+    delay: 5000,
+    disableOnInteraction: false
   }
 });
 
@@ -28,7 +61,8 @@ new Swiper('.featured', {
     }
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
+    disableOnInteraction: false
   }
 });
 
