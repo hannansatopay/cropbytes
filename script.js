@@ -47,10 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   AOS.init({once: true});
   let colors = ["#EBFFEE", "#FFF2BA", "#5000f1"]
   for (let i = 0; i < 10; i++) {
-    let top = Math.floor(Math.random() * document.querySelector("main").scrollHeight / 2);
-    let bottom = getRandomInt(document.querySelector("main").scrollHeight / 2, document.querySelector("main").scrollHeight);
-    console.log(top, bottom);
-    let marginleft = Math.floor(Math.random() * document.querySelector("main").scrollWidth);
+    let top = Math.floor(Math.random() * document.querySelector("main").offsetHeight / 2);
+    let bottom = getRandomInt(document.querySelector("main").offsetHeight / 2, document.querySelector("main").offsetHeight);
+    let marginleft = Math.floor(Math.random() * document.querySelector("main").offsetWidth);
     let color = colors[Math.floor(Math.random() * colors.length)];
     let speed = Math.floor(Math.random() * 7);
     $("main").append(`<div class="rellax" data-rellax-speed=${speed} style="transform: rotate(45deg); top: 0px; position: absolute; width: 25px;height: 25px; background: ${color}; margin-left: ${marginleft}px;margin-top: ${top}px;"></div>`);
