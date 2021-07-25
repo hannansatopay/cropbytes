@@ -11,7 +11,7 @@ $(".playnow.not-loggedIn").click(function() {
     breakpoints: {
       640: {
         slidesPerView: 5,
-        spaceBetween: 20
+        spaceBetween: 25
       }
     }
   });
@@ -27,10 +27,14 @@ $(".playnow.loggedIn").click(function() {
     breakpoints: {
       640: {
         slidesPerView: 5,
-        spaceBetween: 20
+        spaceBetween: 25
       }
     }
   });
+});
+
+$(".navbar-toggler").click(function() {
+  $("html").toggleClass("navbar-open");
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 new Swiper('.hero', {
   loop: true,
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  virtualTranslate: true,
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination',
@@ -47,12 +54,13 @@ new Swiper('.hero', {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false
-  }
+  },
+  autoHeight: true
 });
 
 new Swiper('.featured', {
   loop: true,
-  slidesPerView: 2.5,
+  slidesPerView: 3,
   spaceBetween: 10,
   breakpoints: {
     640: {
@@ -69,13 +77,29 @@ new Swiper('.featured', {
 let economy = new Swiper('.economy', {
   loop: true,
   slidesPerView: 2.1,
-  spaceBetween: 10,
+  spaceBetween: 5,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
   breakpoints: {
     640: {
-      slidesPerView: 7,
-      spaceBetween: 10
+      slidesPerView: 4.4,
+      spaceBetween: 5
     }
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
   }
+});
+
+$(".economy .swiper-slide-visible").css("opacity", 1);
+$(".economy .swiper-slide-prev").fadeTo("slow", 0.2);
+$(".economy .swiper-slide-visible").last().fadeTo("slow", 0.2);
+
+economy.on('slideChangeTransitionEnd', function () {
+  $(".economy .swiper-slide-visible").css("opacity", 1);
+  $(".economy .swiper-slide-prev").fadeTo("slow", 0.2);
+  $(".economy .swiper-slide-visible").last().fadeTo("slow", 0.2);
 });
 
 $(".arrow").click(function() {
@@ -89,13 +113,13 @@ new Swiper('.news', {
   breakpoints: {
     640: {
       slidesPerView: 5,
-      spaceBetween: 20
+      spaceBetween: 25
     }
   }
 });
 
 new Swiper('.testimonials', {
-  loop: true,
+  loop: false,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
@@ -104,14 +128,8 @@ new Swiper('.testimonials', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 1.1,
-  spaceBetween: 5,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 10
-    }
-  }
+  slidesPerView: 1,
+  spaceBetween: 10
 });
 
 $.fn.isInViewport = function() {
@@ -129,21 +147,11 @@ let once = 0;
 $(window).on('resize scroll load', function(){
   if ($('#totaldownloads').isInViewport() && once == 0) {
     once = 1;
-    let totalreach = new countUp.CountUp('totalreach', 60000, {duration: 1, suffix: '+'});
-    let totaldownloads = new countUp.CountUp('totaldownloads', 45, {duration: 1.5, suffix: 'k'});
+    let totalreach = new countUp.CountUp('totalreach', 80000, {duration: 1, suffix: '+'});
+    let totaldownloads = new countUp.CountUp('totaldownloads', 45, {duration: 1.5, suffix: 'K'});
     totalreach.start();
     totaldownloads.start();
   } 
-});
-
-$("body").find('[data-bs-toggle="modal"]').click(function() {
-  let toggle = $(this);
-  let src = toggle.attr("data-bs-video")+"?modestbranding=1&autohide=1&rel=0&showinfo=0&html5=1&autoplay=1"; 
-  $(toggle.attr("data-bs-target")+' iframe').attr('src', src);
-
-  $("#video").on('hidden.bs.modal', function (e) {
-    $("#video iframe").attr("src", toggle.attr("data-bs-video"));
-  });
 });
 
 let mybutton = document.getElementById("btn-back-to-top");

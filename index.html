@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Questrial&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -14,65 +14,73 @@
     </head>
     <body>
         <header class="navbar navbar-expand-lg navbar-light sticky-top bg-white py-3" style="z-index: 99999;">
-            <div class="container-fluid px-4 justify-content-start flex-nowrap">
-                <button class="navbar-toggler border-0 ps-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+            <div class="px-4 d-flex justify-content-start flex-nowrap w-100">
+                <button class="navbar-toggler border-0 ps-0 collapsed" style="min-width: 30px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                     <img src="assets/icon-menu.svg" class="w-100 menu">
                     <img src="assets/icon-close.svg" class="w-100 close">
                 </button>
-                <a class="navbar-brand fw-bold" style="width: 150px;" href="/"><img src="assets/logo.png" class="w-100"></a>
+                <a class="navbar-brand fw-bold d-none d-md-block" href="/">
+                    <img height="45" alt="CropBytes Logo" src="https://ik.imagekit.io/cbytes/tr:w-396/cb-logo-color_eTMorxlcjz.png">
+                </a>
+                <a class="navbar-brand fw-bold d-block d-md-none" href="/">
+                    <img class="w-100" alt="CropBytes Logo" src="https://ik.imagekit.io/cbytes/tr:w-396/cb-logo-color_eTMorxlcjz.png">
+                </a>
                 <div class="collapse navbar-collapse d-none d-md-block">
-                    <ul class="navbar-nav m-auto w-100 justify-content-evenly">
-                        <li class="nav-item d-none">
-                            <a class="nav-link" href="#">About Us</a>
+                    <ul class="navbar-nav m-auto w-100 justify-content-center">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">About Us</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="/how-to-play">How To Play</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/how-to-play">How To Play</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link not-loggedIn" href="/nfts">NFT</a>
+                            <a class="nav-link rounded-pill px-3 not-loggedIn" href="/nfts">NFT</a>
                             <div class="dropdown d-none loggedIn">
-                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                <a class="btn dropdown-toggle rounded-pill px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                     NFT & Breeding
                                 </a>  
-                                <ul class="dropdown-menu mx-4">
+                                <ul class="dropdown-menu mx-4 border-0 shadow" style="border-radius: 20px; margin-left: 0px!important; margin-top: 2rem;">
                                     <li><a class="dropdown-item" href="/nfts">NFT</a></li>
                                     <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/exchange">Trade Center</a>
+                            <a class="nav-link rounded-pill px-3" href="/exchange">Trade Center</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/store">Shop</a>
+                            <a class="nav-link rounded-pill px-3" href="/store">Shop</a>
+                        </li>
+                        <li class="nav-item not-loggedIn">
+                            <a class="nav-link rounded-pill px-3" href="/faq">Help</a>
+                        </li>
+                        <li class="nav-item not-loggedIn">
+                            <a class="nav-link rounded-pill px-3" href="/blog">Blog</a>
                         </li>
                         <li class="nav-item d-none loggedIn">
-                            <a class="nav-link" href="/game-assets">Assets</a>
+                            <a class="nav-link rounded-pill px-3" href="/game-assets">Assets</a>
                         </li>
                         <li class="nav-item d-none loggedIn">
-                            <a class="nav-link" href="/gc-conversion">GC Conversion</a>
+                            <a class="nav-link rounded-pill px-3" href="/gc-conversion">GC Conversion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/faq">Help</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog">Blog</a>
+                            <a href="#" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a>
+                            <a href="#" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a>
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a>
-                <a href="#" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a>
-                <!-- <a href="/login" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow not-loggedIn">Play Game</a> -->
-                <!-- <a href="/farm-view" class="btn btn-dark rounded-pill p-md-2 px-3 px-xxl-5 mx-md-3 playnow d-none loggedIn">Play Game</a> -->
+                <a href="#" class="btn btn-dark rounded-pill flex-shrink-0 m-auto px-3 playnow not-loggedIn d-md-none">Play Game</a>
+                <a href="#" class="btn btn-dark rounded-pill flex-shrink-0 m-auto px-3 playnow d-none loggedIn d-md-none">Play Game</a>
                 <div class="d-none d-md-flex align-items-center">
-                    <img src="assets/avatar.png" style="max-height: 45px;">
+                    <img src="assets/avatar-header.png" style="max-height: 45px;">
                     <div class="ms-1">
                         <span class="fw-bold text-black">Hello, Friend!</span>
+                        <a href="./login" class="fw-bold link-primary d-block not-loggedIn text-decoration-none">Login</a>
                         <span class="fw-bold text-black d-none loggedIn" style="font-size: 12px; display: block;"><img src="assets/trx.png" style="width: 10px;"> 1084.114 <span style="color: #827E7E;">TRX</span></span>
                     </div>
                     <div class="dropdown d-none d-md-block loggedIn">
                         <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"></a>
-                        <ul class="dropdown-menu text-center border-0 p-3" style="border-radius: 20px; right: 10px; left: auto; margin-top: 2rem;">
+                        <ul class="dropdown-menu text-center border-0 p-3 shadow" style="border-radius: 20px; right: 10px; left: auto; margin-top: 2rem;">
                           <li><a class="dropdown-item text-dark mb-2" href="/profile">Profile</a></li>
                           <li><a class="dropdown-item text-dark mb-2" href="/funds">Funds</a></li>
                           <li><a class="dropdown-item text-dark mb-2" href="/history">History</a></li>
@@ -84,54 +92,54 @@
         </header>
 
         <div class="collapse navbar-collapse navbar-mobile vh-100 vw-100 bg-white position-fixed" id="navbar" style="z-index: 9999;">
-            <ul class="navbar-nav m-auto w-100 justify-content-evenly mt-3">
+            <ul class="navbar-nav m-auto w-100 mt-3">
                 <li class="nav-item mx-4 my-1 d-none">
-                    <a class="nav-link" href="#"><img src="assets/icon-heart.svg" class="me-2"> About Us</a>
+                    <a class="nav-link rounded-pill px-3" href="#"><img src="assets/icon-heart.svg" class="me-2"> About Us</a>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> <span class="align-middle">How To Play</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/how-to-play"><img src="assets/icon-play.svg" class="me-2"> <span class="align-middle">How To Play</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link not-loggedIn" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2">
+                    <a class="nav-link rounded-pill px-3 not-loggedIn" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2">
                         <span class="align-middle">NFT</span>
                     </a>
                     <div class="dropdown d-none loggedIn">
-                        <a class="btn ps-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <a class="btn dropdown-toggle rounded-pill px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                             <img src="assets/icon-diamond.svg" class="me-2"> <span class="align-middle">NFT & Breeding</span>
                         </a>  
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/nfts">NFT</a></li>
-                            <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/nfts">NFT</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/breeding">Breeding</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> <span class="align-middle">Trade Center</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/exchange"><img src="assets/icon-chart.svg" class="me-2"> <span class="align-middle">Trade Center</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link" href="/store"><img src="assets/icon-shop.svg" class="me-2"> <span class="align-middle">Shop</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/store"><img src="assets/icon-shop.svg" class="me-2"> <span class="align-middle">Shop</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1 d-none loggedIn">
-                    <a class="nav-link" href="/game-assets"><img src="assets/icon-assets.svg" class="me-2"> <span class="align-middle">Assets</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/game-assets"><img src="assets/icon-assets.svg" class="me-2"> <span class="align-middle">Assets</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1 d-none loggedIn">
-                    <a class="nav-link" href="/gc-conversion"><img src="assets/icon-convert.svg" class="me-2"> <span class="align-middle">GC Conversion</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/gc-conversion"><img src="assets/icon-convert.svg" class="me-2"> <span class="align-middle">GC Conversion</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link" href="/faq"><img src="assets/icon-help.svg" class="me-2"> <span class="align-middle">Help</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/faq"><img src="assets/icon-help.svg" class="me-2"> <span class="align-middle">Help</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1">
-                    <a class="nav-link" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> <span class="align-middle">Blog</span></a>
+                    <a class="nav-link rounded-pill px-3" href="/blog"><img src="assets/icon-blog.svg" class="me-2"> <span class="align-middle">Blog</span></a>
                 </li>
                 <li class="nav-item mx-4 my-1 d-none loggedIn">
                     <div class="dropdown d-none loggedIn">
-                        <a class="btn ps-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                        <a class="btn dropdown-toggle rounded-pill px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                             <img src="assets/icon-profile.svg" class="me-2"> <span class="align-middle">My Profile</span>
                         </a>  
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="/funds">Funds</a></li>
-                            <li><a class="dropdown-item" href="/history">History</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/profile">Profile</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/funds">Funds</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/history">History</a></li>
                         </ul>
                     </div>
                 </li>
@@ -141,6 +149,7 @@
                     <div class="row h-100">
                         <div class="col-7 d-flex flex-column justify-content-center p-4">
                             <h2 class="fw-bold text-black">Hello, Friend!</h2>
+                            <a href="./login" class="fw-bold link-primary d-block not-loggedIn text-decoration-none">Login</a>
                             <h6 class="fw-bold text-black d-none loggedIn"><img src="assets/trx.png" style="width: 20px;"> 1084.114 <span style="color: #827E7E;">TRX</span></h6>
                         </div>
                         <div class="col-5" style="position: absolute; top: -80px; right: 0;">
@@ -152,39 +161,27 @@
         </div>
 
         <main>
-            <div class="row m-0 mb-4" data-aos="fade-down">
-                <div class="swiper-container hero">
-                    <div class="swiper-wrapper w-100">
-                        <div class="swiper-slide row m-0 w-100">
-                            <div class="col-12 col-md-6 p-4 pt-5 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
-                                <h1 class="fw-bold text-black" style="max-width: 500px;">Play & Earn Crypto!</h1>
-                                <h5 class="mb-4 text-dark">Grow your portfolio of assets in your very own farm, using NFTs and cryptocurrencies with Cropbytes.  The most trusted crypto game since 2018.</h5>
-                                <div class="d-none d-md-flex">
-                                    <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="pe-1" style="width: 200px;"></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="ps-1" style="width: 200px;"></a>
-                                </div>
+            <div class="container-fluid row gx-md-5 py-md-4 my-5" data-aos="fade-down">
+                <div class="col-12 col-md-7 text-center text-md-start m-auto">
+                    <div class="swiper-container hero w-100">
+                        <div class="swiper-wrapper w-100">
+                            <div class="swiper-slide row m-0 w-100">
+                                <h1 class="fw-bold text-black p-0">Play & Earn Crypto!</h1>
+                                <h5 class="mb-md-4 p-0">Grow your portfolio of assets in your very own farm, using NFTs and cryptocurrencies with Cropbytes.  The most trusted crypto game since 2018.</h5>
                             </div>
-                            <div class="col-12 col-md-6 p-0">
-                                <img src="assets/hero_desktop.png" class="w-100 d-none d-md-flex floating" />
-                                <img src="assets/hero_mobile.png" class="w-100 d-flex d-md-none floating" />
-                            </div>
-                        </div>
-                        <div class="swiper-slide row m-0 w-100">
-                            <div class="col-12 col-md-6 p-4 pt-5 pb-0 p-md-0 text-center text-md-start d-flex flex-column justify-content-center text-fluid">
-                                <h1 class="fw-bold text-black">Make your NFTs work for you</h1>
-                                <h5 class="mb-4 text-dark">Say hello to NFTs that are rare and also boost your earnings in the game.</h5>
-                                <div class="d-none d-md-flex">
-                                    <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="pe-1" style="width: 200px;"></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="ps-1" style="width: 200px;"></a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 p-0">
-                                <img src="assets/Group 6929.png" class="w-100 d-none d-md-flex floating" />
-                                <img src="assets/Group 6928.png" class="w-100 d-flex d-md-none floating" />
+                            <div class="swiper-slide row m-0 w-100">
+                                <h1 class="fw-bold text-black p-0">Make your NFTs work for you</h1>
+                                <h5 class="mb-md-4 p-0">Say hello to NFTs that are rare and also boost your earnings in the game.</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="d-none d-md-flex">
+                        <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="pe-1" style="width: 200px;"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="ps-1" style="width: 200px;"></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 hero-banner position-relative">
+                    <img src="assets/hero.png" class="w-100 floating" />
                 </div>
 
                 <div class="d-flex d-md-none">
@@ -193,28 +190,30 @@
                 </div>
             </div>
 
-            <div class="row container-fluid">
-                <div class="col-12 col-md-5" data-aos="fade-left">
+            <div class="row py-0 py-md-4 my-5 container-fluid" data-aos="fade-down">
+                <div class="col-12 col-md-4 d-flex align-items-center p-4 position-relative players">
+                    <h3 class="text-dark text-center text-md-start">Trusted by <div id="totalreach" style="display: inline-block;" class="text-dark fw-bold"></div> happy Crypto Farmers world wide.</h3>
+                </div>
+                <div class="col-12 col-md-8 p-2 pt-5 p-md-5 position-relative statistics">
                     <div class="row">
-                        <div class="col-6 p-0 text-center">
-                            <p class="fw-bold m-0 huge text-black"><span id="totaldownloads"></span></p>
-                            <img src="assets/hearts.png" class="w-50 w-md-75">
-                            <p class="mt-2 text-black" style="font-size: 16px;">Downloads</p>
+                        <div class="col-6 text-center">
+                            <img src="assets/downloads.svg" style="width: 75px;" class="d-none d-md-inline-flex">
+                            <p class="fw-bold m-0 huge text-black" id="totaldownloads"></p>
+                            <p class="mb-0 text-black">Active Downloads</p>
+                            <img src="assets/hearts.png" style="width: 100px;">
                         </div>
-                        <div class="col-6 p-0 text-center">
+                        <div class="col-6 text-center">
+                            <img src="assets/experience.svg" style="width: 75px;" class="d-none d-md-inline-flex">
                             <p class="fw-bold m-0 huge text-black">#01</p>
-                            <img src="assets/stars.png" class="w-50 w-md-75">
-                            <p class="mt-2 text-black" style="font-size: 16px;">Crypto Experience</p>
+                            <p class="mb-0 text-black">Crypto Experience</p>
+                            <img src="assets/stars.png" style="width: 100px;">
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 d-flex align-items-center ps-md-5" data-aos="fade-right">
-                    <h2 class="fw-bold text-alternate-black text-center text-md-start my-3">Trusted by <div id="totalreach" style="display: inline-block;"></div> happy Crypto Farmers world wide.</h2>
-                </div>
             </div>
 
-            <div class="row text-center container-fluid p-5 my-4 my-md-5" style="background: #F5F4F4;">
-                <h5 class="mb-4">Also featured in:</h5>
+            <div class="row text-center container-fluid py-0 py-md-4 my-5" data-aos="fade-down">
+                <h1 class="mb-4">Featured In</h1>
                 <div class="swiper-container featured">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide d-flex align-items-center"><a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank"><img src="assets/logo-2.png" class="w-100"></a></div>
@@ -226,149 +225,105 @@
                 </div>
             </div>
 
-            <div class="row container-fluid py-2 py-md-5 text-center d-none loggedIn">
-                <h4 class="fw-bold">What's New?</h4>
-                <h5>A round up of the latest news and releases.</h5>
-                <!-- <img src="assets/banner.png" class="w-100 p-0"> -->
-                <div class="swiper-container news pt-4">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="assets/news-1.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Press Release</h5>
-                            <h5 class="text-start"><a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/news-2.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">In the news</h5>
-                            <h5 class="text-start"><a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/news-3.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Latest Releases!</h5>
-                            <h5 class="text-start"><a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/news-4.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Podcast</h5>
-                            <h5 class="text-start"><a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/news-5.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Fishing Mini-game</h5>
-                            <h5 class="text-start"><a href="https://blog.cropbytes.com/fishing-mini-game/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
-                        </div>
-                    </div>
+            <div class="container-fluid text-center py-0 py-md-5 my-5" data-aos="fade-down">
+                <div class="py-0 py-md-4 pb-md-5">
+                    <h1>The Game Experience</h1>
+                <h5 class="my-4 w-md-75 m-auto">Get rewards in crypto as you play and build your skills</h5>
                 </div>
-            </div>
-
-            <div class="row my-5 p-2 pb-4 d-none flex-md-row-reverse loggedIn">
-                <div class="col-12 col-md-6 p-0">
-                    <img src="assets/Group 7013.png" class="w-100 d-none d-md-block">
-                    <img src="assets/Group 7012.png" class="w-100 d-block d-md-none">
-                </div>
-                <div class="col-12 col-md-6 px-4 d-flex align-items-center text-fluid">
-                    <div>
-                        <h2 class="fw-bold text-alternate-black my-3">Earn upto 2000 TRX with every Referral Completion*</h2>
-                        <a href="/referral" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4">Invite Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row p-2 p-md-5 pb-0" data-aos="fade-right">
-                <div class="col-12 col-md-7">
-                    <div class="card mb-3 border-0 bg-transparent">
-                        <div class="row g-0 flex-row-reverse flex-md-row">
-                            <div class="col-6 col-md-5" style="margin-top: -50px;">
-                                <img src="assets/cryptoworld.png" class="w-100 floating">
-                            </div>
-                            <div class="col-6">
-                                <div class="card-body">
-                                    <h3 class="card-title fw-bold">Crypto World</h3>
-                                    <h5 class="card-text">Learn how to use assets to grow your very own <strong>#Cryptofarm</strong> into a sucessful crypto business.</h5>
-                                    <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4 not-loggedIn">How to Play</a>
-                                    <a href="/how-to-play" class="btn btn-warning mt-2 mt-md-4 rounded-pill p-2 px-4 d-none loggedIn">View my Assets</a>
+                <div class="row pt-md-5 mt-5 g-2">
+                    <div class="col-12 col-md-6 cryptoworld">
+                        <div class="card border-0">
+                            <div class="card-body text-start row p-3 p-md-5 g-0" style="background: #FFDA3A; border-radius: 20px; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));">
+                                <div class="col-10 col-md-8">
+                                    <h3 class="card-title fw-bold" style="color: #1D293F;">Crypto World</h3>
+                                    <h5 class="card-text" style="color: #474747;">Learn how to use assets to grow your very own <strong style="color: initial;">#Cryptofarm</strong> into a sucessful crypto business.</h5>
+                                </div>
+                                <div class="col-5 asset">
+                                    <img src="assets/cryptoworld.png" class="w-100 floating">
                                 </div>
                             </div>
+                            <a href="/how-to-play" class="btn mt-4 rounded-pill fw-bold p-3 px-5" style="background: #FFDA3A; width: fit-content;">How to Play</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div data-aos="fade-left" class="row justify-content-end p-2 p-md-5 pt-md-0 trade">
-                <div class="col-12 col-md-6" style="margin-top: 200px;">
-                    <div class="card mb-3 border-0 bg-transparent">
-                        <div class="row g-0">
-                            <div class="col-5 col-md-5 cbxtoken">
-                                <img src="assets/cbxtokens.png" class="w-100 floating">
-                            </div>
-                            <div class="col-7 col-md-7">
-                                <div class="card-body text-white text-end text-md-start">
+    
+                    <div class="col-12 col-md-6 pt-md-5 mt-4 mt-md-0 cbxtokens">
+                        <div class="card border-0">
+                            <div class="card-body text-start row p-3 p-md-5 g-0" style="background: #171B29; border-radius: 20px; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));">
+                                <div class="col-10 col-md-8">
                                     <h3 class="card-title fw-bold" style="color: #8BF99C;">Earn & Trade In CBX</h3>
-                                    <h5 class="card-text">A virtual world when you can play, contribute to the ecocystem and earn CBX tokens.</h5>
-                                    <a href="/exchange" class="btn mt-2 mt-md-4 rounded-pill p-2 px-4 not-loggedIn" style="background: #8BF99C;">View Trade Centre</a>
-                                    <a href="/exchange" class="btn mt-2 mt-md-4 rounded-pill p-2 px-4 d-none loggedIn" style="background: #8BF99C;">Trade Now</a>
+                                    <h5 class="card-text" style="color: #ECECEC;">A virtual world where you can play, contribute to the ecosystem and get CBX tokens.</h5>
+                                </div>
+                                <div class="col-5 asset">
+                                    <img src="assets/cbxtokens.png" class="w-100 floating">
                                 </div>
                             </div>
+                            <a href="/exchange" class="btn mt-4 rounded-pill p-3 px-5 fw-bold not-loggedIn" style="background: #8BF99C; width: fit-content;">Visit Exchange</a>
+                            <a href="/exchange" class="btn mt-4 rounded-pill p-3 px-5 d-none fw-bold loggedIn" style="background: #8BF99C; width: fit-content;">View trade center</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row py-md-5 mx-2 text-center not-loggedIn" style="display: flex; justify-content: center;">
-                <div class="container-fluid py-4">
-                    <img src="assets/coins.png" class="mb-4 mb-md-5 w-50 w-md-25">
-                    <h3 class="fw-bold">A Balanced Economy</h3>
+            <div class="row container-fluid py-0 py-md-4 my-5 mx-2 text-center not-loggedIn" style="display: flex; justify-content: center;" data-aos="fade-down">
+                <div class="pb-0 pb-md-4">
+                    <h1>A Balanced Economy</h1>
                     <h5 class="my-4 w-md-75 m-auto">CropBytes is leading the crypto gaming revolution with a beautifully crafted game economy. Use the power of crypto to play and earn in the virtual world.</h5>
                 </div>
-                <div class="swiper-container economy mt-5" style="overflow: visible;" data-aos="fade-right">
+                <div class="swiper-container economy">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" style="z-index: 7;">
-                            <img src="assets/arrow.png" class="arrow" style="left: -30px; right: auto;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7002.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">GET ASSETS AND START FARMING</h6>
+                                <h6 class="card-title px-5 text-alternate">Get Assets & Start Farming</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 6;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7003.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">GROW CROPS AND FRUITS TO MAKE FOOD</h6>
+                                <h6 class="card-title px-5 text-alternate">Grow Crops & Fruits to Make Food</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 5;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7004.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">FEED ANIMALS AND GET EXTRACTS</h6>
+                                <h6 class="card-title px-5 text-alternate">Feed Animals & Get Extracts</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 4;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7005.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">COLLECT UTILITIES TO SELL</h6>
+                                <h6 class="card-title px-5 text-alternate">Collect Utilities to Sell</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 3;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7010.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">CONVERT EXTRACTS TO GAME COINS</h6>
+                                <h6 class="card-title px-5 text-alternate">Convert Extracts to Game Coins</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 2;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7007.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">TRADE ASSETS AND COLLECTIBLES</h6>
+                                <h6 class="card-title px-5 text-alternate">Trade Assets & Collectibles</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
                         <div class="swiper-slide" style="z-index: 1;">
-                            <div class="card h-100" style="background: #FFDA3A; border-radius: 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                            <img src="assets/arrow.png" class="arrow" style="left: -20px; right: auto;">
+                            <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7008.png" class="card-img-top floating">
-                                <h6 class="card-title fw-bolder m-3 px-3 px-xxl-4 d-flex align-items-center h-100">GENERATE RETURNS IN CRYPTO</h6>
+                                <h6 class="card-title px-5 text-alternate">Generate Returns in Crypto</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -376,283 +331,242 @@
                 </div>
             </div>
 
-            <div class="row container-fluid pt-5 pb-3">
-                <div class="col-12 col-md-7 p-0 pb-4 p-md-0" data-aos="fade-right">
-                    <h3 class="fw-bold text-center text-md-start text-black">Our Highlights</h3>
-                    <h5 class="text-center text-md-start my-4 text-dark">We are building one of the most immersive gaming experience. Over the years we have listened to our users and made progressive leaps  in the game.</h5>
-                    <div class="position-relative">
-                        <img src="assets/iphone-desktop.png" class="w-100 d-none d-md-block">
-                        <img src="assets/iphone-mobile.png" class="w-100 d-block d-md-none">
-                        <img src="assets/icon-playvideo.svg" class="play-icon btn" data-bs-toggle="modal" data-bs-target="#video" data-bs-video="https://www.youtube.com/embed/CQs5cs7g-0c">
+            <div class="row container-fluid py-0 py-md-4 my-5 text-center" data-aos="fade-down">
+                <div class="col-12 p-0 pb-4 p-md-0">
+                    <div class="pb-0 pb-md-4">
+                        <h1>Our Highlights</h1>
+                        <h5 class="my-4 w-md-75 m-auto">We are building one of the most immersive gaming experience. Over the years we have listened to our users and made progressive leaps  in the game.</h5>
+                        <video class="w-100 w-md-75" autoplay muted> <source src="./assets/video.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
                     </div>
-                    <!-- <div class="text-center">
-                        <button type="button" class="btn btn-outline-secondary rounded-pill p-2 px-5" data-bs-toggle="modal" data-bs-target="#video" data-bs-video="https://www.youtube.com/embed/CQs5cs7g-0c">Watch Video</button>
-                    </div> -->
                 </div>
-                <div class="col-12 col-md-5 p-0 px-md-5" data-aos="fade-left">
+
+                <div class="col-12 p-0 my-0 my-md-5" data-aos="shake">
                    <div class="row">
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/balancedeconomy.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Balanced Economy</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Balanced Economy</h5>
                         </div>
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/realownership.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Real Ownership</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Real Ownership</h5>
                         </div>
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/openmarkettrade.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Open Market Trade</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Open Market Trade</h5>
                         </div>
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/utilitybasednft.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Utility Based NFT</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Utility Based NFT</h5>
                         </div>
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/metaverseofgames.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Metaverse of Games</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Metaverse of Games</h5>
                         </div>
-                        <div class="col-4 col-md-6 p-2 px-md-4 text-center">
+                        <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/leadersincryptogaming.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-2 p-1 text-black">Leaders in Crypto Gaming</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Leaders in Crypto Gaming</h5>
                         </div>
                    </div> 
                 </div>
             </div>
 
-            <div class="row container-fluid py-2 py-md-5 text-center not-loggedIn">
-                <h4 class="fw-bold">What's New?</h4>
-                <h5>A round up of the latest news and releases.</h5>
-                <!-- <img src="assets/banner.png" class="w-100 p-0"> -->
+            <div class="row container-fluid py-0 py-md-4 my-5 text-center not-loggedIn" data-aos="fade-down">
+                <div class="pb-0 pb-md-4">
+                    <h1>What's New?</h1>
+                    <h5 class="my-4 w-md-75 m-auto">A round up of the latest news and releases.</h5>
+                </div>
                 <div class="swiper-container news pt-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            <a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="text-decoration-none">
                             <img src="assets/news-1.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Press Release</h5>
-                            <h5 class="text-start"><a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                            <p class="card-title text-start">CropBytes soon to launch the much-awaited CBX token sale</p>
+                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            </a>
                         </div>
+                        
                         <div class="swiper-slide">
+                            <a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="text-decoration-none"></a>
                             <img src="assets/news-2.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">In the news</h5>
-                            <h5 class="text-start"><a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                            <p class="card-title text-start">Trading Simulators and Games for Bitcoin Traders</p>
+                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            </a>
                         </div>
+                        
                         <div class="swiper-slide">
+                            <a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="text-decoration-none"></a>
                             <img src="assets/news-3.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Latest Releases!</h5>
-                            <h5 class="text-start"><a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                            <p class="card-title text-start">Crypto Farming Just Got Better!</p>
+                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            </a>
                         </div>
+                        
                         <div class="swiper-slide">
+                            <a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar" target="_blank" class="text-decoration-none"></a>
                             <img src="assets/news-4.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Podcast</h5>
-                            <h5 class="text-start"><a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                            <p class="card-title text-start">GFTB: CropBytes With CEO Sandeep Kumar</p>
+                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            </a>
                         </div>
+                        
                         <div class="swiper-slide">
+                            <a href="https://blog.cropbytes.com/fishing-mini-game" target="_blank" class="text-decoration-none"></a>
                             <img src="assets/news-5.png" class="card-img-top mb-3">
-                            <h5 class="card-title text-start alternate-font">Fishing Mini-game</h5>
-                            <h5 class="text-start"><a href="https://blog.cropbytes.com/fishing-mini-game/" target="_blank" class="link-primary text-decoration-none alternate-font">Read More</a></h5>
+                            <p class="card-title text-start">Fishing Mini-Game</p>
+                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row container-fluid py-5 text-center">
-                <h4 class="fw-bolder">Talk of the town</h4>
-                <p>Here what our users have to say about CropBytes.</p>
+            <div class="row container-fluid py-0 py-md-4 my-5 text-center" data-aos="fade-down">
+                <h1>Talk of the Town!</h1>
                 <div class="swiper-container mt-4 testimonials">
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
-                            <div class="card p-3 pb-5 border-0" style="background: url('assets/bubble.png');background-size: 100% 100%;">
-                                <div class="row g-0">
-                                    <div class="col-3">
-                                        <img src="assets/marissmith.png" class="rounded-circle w-100 p-1">
-                                    </div>
-                                    <div class="col-9 ps-2">
-                                        <div class="text-start">
-                                            <p class="card-text">The best crypto game I have come across. CropBytes is going to be huge!</p>
-                                            <p class="fw-bold m-0">Maria Smith</p>
-                                            <p class="fw-bold m-0">Crypto Trader </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/marissmith.png" class="rounded-circle mb-4" style="width: 100px;">
+                            <p class="card-text">The best crypto game I have come across. CropBytes is going to be huge!</p>
+                            <span class="fw-bold person d-block">Maria Smith</span>
+                            <span class="m-0 role d-block">Crypto Trader</span>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card p-3 pb-5 border-0" style="background: url('assets/bubble.png');background-size: 100% 100%;">
-                                <div class="row g-0">
-                                    <div class="col-3">
-                                        <img src="assets/deepamohan.png" class="rounded-circle w-100 p-1">
-                                    </div>
-                                    <div class="col-9 ps-2">
-                                        <div class="text-start">
-                                            <p class="card-text">I like farming games, but this is the only game where I have earned by playing.</p>
-                                            <p class="fw-bold m-0">Patricia</p>
-                                            <p class="fw-bold m-0">Casual Gamer & Mom</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/deepamohan.png" class="rounded-circle mb-4" style="width: 100px;">
+                            <p class="card-text">I like farming games, but this is the only game where I have earned by playing.</p>
+                            <span class="fw-bold person d-block">Patricia</span>
+                            <span class="m-0 role d-block">Casual Gamer & Mom</span>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card p-3 pb-5 border-0" style="background: url('assets/bubble.png');background-size: 100% 100%;">
-                                <div class="row g-0">
-                                    <div class="col-3">
-                                        <img src="assets/ikemercap.png" class="rounded-circle w-100 p-1">
-                                    </div>
-                                    <div class="col-9 ps-2">
-                                        <div class="text-start">
-                                            <p class="card-text">This is a great way to generate crypto passively. I have made a good profit so far.</p>
-                                            <p class="fw-bold m-0">Ike Mercap</p>
-                                            <p class="fw-bold m-0">Streamer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/ikemercap.png" class="rounded-circle mb-4" style="width: 100px;">
+                            <p class="card-text">This is a great way to generate crypto passively. I have made a good profit so far.</p>
+                            <span class="fw-bold person d-block">Ike Mercap</span>
+                            <span class="m-0 role d-block">Streamer</span>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card p-3 pb-5 border-0" style="background: url('assets/bubble.png');background-size: 100% 100%;">
-                                <div class="row g-0">
-                                    <div class="col-3">
-                                        <img src="assets/matt.png" class="rounded-circle w-100 p-1">
-                                    </div>
-                                    <div class="col-9 ps-2">
-                                        <div class="text-start">
-                                            <p class="card-text">I've watched this game go from concept to fully functional economy, with more to come.</p>
-                                            <p class="fw-bold m-0">Matt</p>
-                                            <p class="fw-bold m-0">Crypto Miner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/matt.png" class="rounded-circle mb-4" style="width: 100px;">
+                            <p class="card-text">I've watched this game go from concept to fully functional economy, with more to come.</p>
+                            <span class="fw-bold person d-block">Matt</span>
+                            <span class="m-0 role d-block">Crypto Miner</span>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card p-3 pb-5 border-0" style="background: url('assets/bubble.png');background-size: 100% 100%;">
-                                <div class="row g-0">
-                                    <div class="col-3">
-                                        <img src="assets/tomlamb.png" class="rounded-circle w-100 p-1">
-                                    </div>
-                                    <div class="col-9 ps-2">
-                                        <div class="text-start">
-                                            <p class="card-text">The in-game economy allows players to make a profit by playing. This is the future!</p>
-                                            <p class="fw-bold m-0">Tom Lamb</p>
-                                            <p class="fw-bold m-0">Crypto Investor</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="assets/tomlamb.png" class="rounded-circle mb-4" style="width: 100px;">
+                            <p class="card-text">The in-game economy allows players to make a profit by playing. This is the future!</p>
+                            <span class="fw-bold person d-block">Tom Lamb</span>
+                            <span class="m-0 role d-block">Crypto Investor</span>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev" style="left: 30px;"></div>
+                    <div class="swiper-button-next" style="right: 30px;"></div>
                 </div>
             </div>
-
-            <div class="d-none d-md-block position-relative m-auto" style="top: -190px; width: 97%;">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-            <div class="w-100" style="background: #FFDA3A;height: 200px;margin-top: -200px;"></div>
             
         </main>
 
-        <footer class="navbar container-fluid navbar-light bg-light py-5">
+        <footer class="navbar container-fluid py-5">
             <div class="row">
                 <div class="col-12 col-md-4 text-center text-md-start">
-                    <img src="assets/logofull.png" class="w-75 mb-3">
-                    <div class="social-icons d-flex w-md-75">
+                    <h2 class="text-white huge mb-2 mb-md-0">Get in touch.</h2>
+                    <img src="assets/logofull.png" class="w-50 mb-3">
+                    <p class="text-white" style="font-size: 16px;">Bangalore, India</p>
+                    <p class="text-white" style="font-size: 16px;">support@cropbytes.com</p>
+                    <div class="social-icons d-flex w-50 w-md-75 m-auto m-md-0">
                         <a href="https://t.me/ccropbytes" target="_blank" class="w-50"><img src="assets/icon-telegram.svg" class="w-100"></a>
                         <a href="https://www.youtube.com/channel/UCShiuZuJI3mOTyWbr115rRQ?view_as=subscriber" target="_blank" class="w-50"><img src="assets/icon-youtube.svg" class="w-100"></a>
                         <a href="https://www.linkedin.com/company/cropbytes" target="_blank" class="w-50"><img src="assets/icon-linkedin.svg" class="w-100"></a>
                         <a href="https://www.facebook.com/cropbytes/" target="_blank" class="w-50"><img src="assets/icon-facebook.svg" class="w-100"></a>
                         <a href="https://twitter.com/CropBytes" target="_blank" class="w-50"><img src="assets/icon-twitter.svg" class="w-100"></a>
                     </div>
-                    <p class="m-0 alternate-font" style="font-size: 16px;">Bangalore, India</p>
-                    <p class="alternate-font" style="font-size: 16px;">support@cropbytes.com</p>
-                    <div class="d-flex d-md-block download">
-                        <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank"><img src="assets/appstore.png" class="p-2 pb-4 p-md-0 py-md-1"></a>
-                        <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank"><img src="assets/googleplay.png" class="p-2 pb-4 p-md-0 py-md-1"></a>
+                    <div class="d-flex d-md-none w-100">
+                        <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank" class="w-100"><img src="assets/appstore.png" class="p-2 pb-4 p-md-0 py-md-1 w-100"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank" class="w-100"><img src="assets/googleplay.png" class="p-2 pb-4 p-md-0 py-md-1 w-100"></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="row">
                         <div class="col-12 col-md-3 accordion accordion-flush">
-                            <p class="mb-2 fw-bold alternate-font accordion-item collapsed border-0 bg-transparent" data-bs-toggle="collapse" data-bs-target="#game">Game <i class="fa fa-angle-up float-end"></i></p>
+                            <p class="mb-2 fw-bold accordion-item collapsed border-0 bg-transparent text-white px-3" data-bs-toggle="collapse" data-bs-target="#game">Game <i class="fa fa-angle-up float-end text-white"></i></p>
                             <ul class="navbar-nav accordion-collapse collapse" id="game">
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/farm-view">Play</a>
+                                    <a class="nav-link rounded-pill px-3" href="/farm-view">Play</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/exchange">Trade</a>
+                                    <a class="nav-link rounded-pill px-3" href="/exchange">Trade</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/game-assets">Assets</a>
+                                    <a class="nav-link rounded-pill px-3" href="/game-assets">Assets</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/nfts">NFT's Breeding</a>
+                                    <a class="nav-link rounded-pill px-3" href="/nfts">NFT's Breeding</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/how-to-play">How to Play</a>
+                                    <a class="nav-link rounded-pill px-3" href="/how-to-play">How to Play</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/referral">Referral</a>
+                                    <a class="nav-link rounded-pill px-3" href="/referral">Referral</a>
                                 </li>
                             </ul>
-                            <hr class="d-block d-md-none">
+                            <hr class="d-block d-md-none bg-white">
                         </div>
                         <div class="col-12 col-md-3">
-                            <p class="mb-2 fw-bold alternate-font accordion-item collapsed border-0 bg-transparent" data-bs-toggle="collapse" data-bs-target="#about">About <i class="fa fa-angle-up float-end"></i></p>
+                            <p class="mb-2 fw-bold accordion-item collapsed border-0 bg-transparent text-white px-3" data-bs-toggle="collapse" data-bs-target="#about">About <i class="fa fa-angle-up float-end text-white"></i></p>
                             <ul class="navbar-nav accordion-collapse collapse" id="about">
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="#">CBX Token</a>
+                                    <a class="nav-link rounded-pill px-3" href="#">CBX Token</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="#">About Us</a>
+                                    <a class="nav-link rounded-pill px-3" href="#">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="#">For Companies</a>
+                                    <a class="nav-link rounded-pill px-3" href="#">For Companies</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="#">Career</a>
+                                    <a class="nav-link rounded-pill px-3" href="#">Career</a>
                                 </li>
                             </ul>
-                            <hr class="d-block d-md-none">
+                            <hr class="d-block d-md-none bg-white">
                         </div>
                         <div class="col-12 col-md-3">
-                            <p class="mb-2 fw-bold alternate-font accordion-item collapsed border-0 bg-transparent" data-bs-toggle="collapse" data-bs-target="#support">Support <i class="fa fa-angle-up float-end"></i></p>
+                            <p class="mb-2 fw-bold accordion-item collapsed border-0 bg-transparent text-white px-3" data-bs-toggle="collapse" data-bs-target="#support">Support <i class="fa fa-angle-up float-end text-white"></i></p>
                             <ul class="navbar-nav accordion-collapse collapse" id="support">
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/faq">FAQ</a>
+                                    <a class="nav-link rounded-pill px-3" href="/faq">FAQ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="https://t.me/cropbytes">Community</a>
+                                    <a class="nav-link rounded-pill px-3" href="https://t.me/cropbytes">Community</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="mailto:support@cropbytes.com">Email us</a>
+                                    <a class="nav-link rounded-pill px-3" href="mailto:support@cropbytes.com">Email us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/fees">Trading, Deposit & Withdraw Fees</a>
+                                    <a class="nav-link rounded-pill px-3" href="/fees">Trading, Deposit & Withdraw Fees</a>
                                 </li>
                             </ul>
-                            <hr class="d-block d-md-none">
+                            <hr class="d-block d-md-none bg-white">
                         </div>
                         <div class="col-12 col-md-3">
-                            <p class="mb-2 fw-bold alternate-font accordion-item collapsed border-0 bg-transparent" data-bs-toggle="collapse" data-bs-target="#legal">Legal <i class="fa fa-angle-up float-end"></i></p>
+                            <p class="mb-2 fw-bold accordion-item collapsed border-0 bg-transparent text-white px-3" data-bs-toggle="collapse" data-bs-target="#legal">Legal <i class="fa fa-angle-up float-end text-white"></i></p>
                             <ul class="navbar-nav accordion-collapse collapse" id="legal">
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/terms">Terms of Use</a>
+                                    <a class="nav-link rounded-pill px-3" href="/terms">Terms of Use</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/offer-terms">Privacy Policy</a>
+                                    <a class="nav-link rounded-pill px-3" href="/offer-terms">Privacy Policy</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link alternate-font" href="/privacy">Offer Terms</a>
+                                    <a class="nav-link rounded-pill px-3" href="/privacy">Offer Terms</a>
                                 </li>
                             </ul>
-                            <hr class="d-block d-md-none">
                         </div>
                     </div>
                 </div>
-                <div class="col-12 mt-5 text-center text-md-start">
-                    <span class="col-12 col-md-6 alternate-font" style="font-size: 13px;">© CropBytes 2019, All Rights Reserved</span>
-                    <span class="col-12 col-md-6 text-center text-md-end alternate-font" style="font-size: 13px; float: right;">Designed with love by CollabCurry</span>
+
+                <div class="row mt-5 pt-4 p-0 border-top border-secondary">
+                    <div class="col-12 p-0 col-md-4 d-none d-md-flex">
+                        <a href="https://apps.apple.com/us/app/cropbytes-farm/id1441553490?ls=1" target="_blank" class="pe-2"><img src="assets/appstore.png" class="w-100"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.Hyfll.FarmingGame&hl=en" target="_blank" class="ps-2"><img src="assets/googleplay.png" class="w-100"></a>
+                    </div>
+                    <div class="col-12 col-md-8 text-center text-md-end m-auto"><span class="text-white">© CropBytes 2019, All Rights Reserved</span></div>
                 </div>
             </div>
         </footer>
@@ -660,17 +574,6 @@
         <button type="button" class="btn btn-floating" id="btn-back-to-top">
             <img src="assets/icon-arrow.svg" class="w-100">
         </button>
-
-        <div class="modal fade" id="video" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-body p-0 bg-dark embed-responsive">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" style="position: absolute; right: 10px; top: 10px; z-index: 9; background-color: #FFDA3A; border-radius: 100%; padding: 10px; opacity: 1.0;"></button>
-                        <iframe class="d-block embed-responsive-item" width="100%" height="500" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
