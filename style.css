@@ -12,7 +12,6 @@
   outline: none;
 }
 
-
 /* Shake keyframes animation */
 [data-aos="shake"].aos-animate {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -54,8 +53,11 @@ html.navbar-open {
 }
 
 body {
-  /* overflow-x: hidden; */
   padding: 0px !important;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 header .nav-link {
@@ -83,15 +85,13 @@ footer .nav-link {
   display: flex;
 }
 
-/* header .nav-item:hover:after {
-  display: flex;
-  content: "";
-  border-bottom: 4px solid #ffe428;
-} */
-
 .nav-item a:hover {
   background: #8BF99C;
   color: #171B29;
+}
+
+.navbar-toggler {
+  min-width: 30px;
 }
 
 .navbar-toggler .menu {
@@ -126,6 +126,12 @@ footer .nav-link {
   list-style: disc;
 }
 
+.dropdown-menu {
+  border-radius: 20px;
+  margin-left: 0px!important;
+  margin-top: 2rem !important;
+}
+
 .navbar-mobile .navbar-nav {
   overflow-y: scroll;
   max-height: calc(100% - 200px);
@@ -136,6 +142,15 @@ footer .nav-link {
   box-shadow: inset 0px 4px 6px rgb(0 0 0 / 18%) !important;
   border-radius: 12px !important;
   margin: 2px;
+}
+
+.btn-dark {
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.bg-yellow {
+  background: #FFDA3A;
 }
 
 .touch-flex {
@@ -183,12 +198,7 @@ footer .nav-link {
   }
 }
 
-/* .alternate-font {
-  font-family: Circular Std !important;
-} */
-
 button:focus {
-  /* outline: none; */
   border-color: inherit !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -230,21 +240,6 @@ footer .huge {
   font-size: 32px;
 }
 
-/* .navbar .container-fluid {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-} */
-
-/* .playnow {
-  position: absolute;
-  right: 10px;
-  top: 15px;
-} */
-
-/* .navbar-brand {
-  flex: 1;
-} */
-
 .hero-banner:after {
   content: '';
   background: #FFDA3A;
@@ -261,16 +256,6 @@ footer .huge {
   right: 0;
   text-align: center;
 }
-
-/* .navbar-collapse.show, .navbar-collapse.collapsing {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 95px;
-  height: 100vh;
-  width: 100vw;
-  background: white;
-} */
 
 .news {
   overflow: visible;
@@ -293,10 +278,16 @@ footer .huge {
 
 .cryptoworld .card-body {
   border-top-left-radius: 50px !important;
+  border-radius: 20px; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
 }
 
 .cbxtokens .card-body {
   border-bottom-right-radius: 50px !important;
+  background: #171B29; border-radius: 20px; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+.cbxtokens a {
+  background: #8BF99C; width: fit-content;
 }
 
 .cryptoworld .asset {
@@ -334,10 +325,6 @@ footer .huge {
   top: 100px;
   z-index: -1;
 }
-
-/* .featured {
-  overflow: visible;
-} */
 
 .swiper-button-prev, .swiper-button-next {
   top: 20%;
@@ -406,19 +393,6 @@ footer .huge {
     background: #FFDA3A; border-bottom-left-radius: 50px; border-top-right-radius: 50px; top: -50px;
   }
 
-  /* .playnow {
-    position: inherit;
-  } */
-
-  /* .navbar-collapse.show {
-    position: inherit;
-    left: 0px;
-    right: 0px;
-    top: 100px;
-    width: 100vw;
-    background: white;
-  } */
-
   .healer {
     position: initial;
   }
@@ -465,10 +439,6 @@ footer .huge {
     line-height: 1 !important;
   }
 
-  /* .featured {
-    overflow: hidden;
-  }   */
-
   .container-fluid {
     padding-left: 5em!important;
     padding-right: 5em!important;
@@ -489,18 +459,6 @@ footer .huge {
     width: 50px !important;
     height: 50px;
   }
-
-  /* .arrow {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    right: -40px;
-    bottom: 20px; 
-  } */
-
-  /* .news {
-    overflow: hidden;
-  } */
 
   .collapse {
     display: block !important;
@@ -534,6 +492,10 @@ footer .huge {
 
 #btn-back-to-top i {
   font-size: 25px;
+}
+
+.testimonials img {
+  width: 100px;
 }
 
 .testimonials .card-text {
@@ -572,22 +534,14 @@ footer .huge {
   overflow: visible;
 }
 
+.economy .swiper-slide .arrow:first-child {
+  left: -20px; right: auto;
+}
+
 .economy .swiper-slide {
   padding-top: 80px;
   padding-bottom: 10px;
 }
-
-/* .swiper-slide {
-  opacity: 0;
-}
-
-.swiper-slide-visible {
-  opacity: 1;
-}
-
-.swiper-container .swiper-slide-visible:last-child {
-  opacity: 0;
-} */
 
 .economy .swiper-slide:nth-child(1) .floating {
   animation-delay: 0s;
