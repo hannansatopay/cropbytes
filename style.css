@@ -126,7 +126,7 @@ footer .nav-link {
   list-style: disc;
 }
 
-.dropdown-menu {
+header .dropdown-menu {
   border-radius: 20px;
   margin-left: 0px!important;
   margin-top: 2rem !important;
@@ -134,7 +134,7 @@ footer .nav-link {
 
 .navbar-mobile .navbar-nav {
   overflow-y: scroll;
-  max-height: calc(100% - 200px);
+  max-height: calc(100% - 325px);
 }
 
 .touch-flex-cell {
