@@ -10,7 +10,11 @@ $(".playnow.not-loggedIn").click(function() {
     spaceBetween: 10,
     breakpoints: {
       640: {
-        slidesPerView: 5,
+        slidesPerView: 4,
+        spaceBetween: 25
+      },
+      1400: {
+        slidesPerView: 3,
         spaceBetween: 25
       }
     }
@@ -26,7 +30,11 @@ $(".playnow.loggedIn").click(function() {
     spaceBetween: 10,
     breakpoints: {
       640: {
-        slidesPerView: 5,
+        slidesPerView: 4,
+        spaceBetween: 25
+      },
+      1400: {
+        slidesPerView: 3,
         spaceBetween: 25
       }
     }
@@ -45,15 +53,15 @@ function getRandomInt(min, max) {
 
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({once: true});
-  let colors = ["#EBFFEE", "#FFF2BA", "#5000f1"]
+  let colors = ["#EBFFEE", "#FFF2BA"]
   for (let i = 0; i < 10; i++) {
     let top = Math.floor(Math.random() * document.querySelector("main").offsetHeight / 2);
     let bottom = getRandomInt(document.querySelector("main").offsetHeight / 2, document.querySelector("main").offsetHeight);
     let marginleft = Math.floor(Math.random() * document.querySelector("main").offsetWidth);
     let color = colors[Math.floor(Math.random() * colors.length)];
     let speed = Math.floor(Math.random() * 7);
-    $("main").append(`<div class="rellax" data-rellax-speed=${speed} style="transform: rotate(45deg); top: 0px; position: absolute; width: 25px;height: 25px; background: ${color}; margin-left: ${marginleft}px;margin-top: ${top}px;"></div>`);
-    $("main").append(`<div class="rellax" data-rellax-speed=${speed} style="transform: rotate(45deg); top: 0px; position: absolute; width: 25px;height: 25px; background: ${color}; margin-left: ${marginleft}px;margin-top: ${bottom}px;"></div>`);
+    $("main").append(`<div class="rellax" data-rellax-speed=${speed} style="background: ${color}; margin-left: ${marginleft}px;margin-top: ${top}px;"></div>`);
+    $("main").append(`<div class="rellax" data-rellax-speed=${speed} style="background: ${color}; margin-left: ${marginleft}px;margin-top: ${bottom}px;"></div>`);
   }
   new Rellax('.rellax');
 });
@@ -129,14 +137,18 @@ new Swiper('.news', {
   spaceBetween: 10,
   breakpoints: {
     640: {
-      slidesPerView: 5,
+      slidesPerView: 4,
+      spaceBetween: 25
+    },
+    1400: {
+      slidesPerView: 3,
       spaceBetween: 25
     }
   }
 });
 
 new Swiper('.testimonials', {
-  loop: false,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true

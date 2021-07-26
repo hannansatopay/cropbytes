@@ -34,21 +34,21 @@
                             <a class="nav-link rounded-pill px-3" href="/how-to-play">How To Play</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link rounded-pill px-3 not-loggedIn" href="/nfts">NFT</a>
+                            <a class="nav-link rounded-pill px-3 not-loggedIn" href="/nfts">NFTs</a>
                             <div class="dropdown d-none loggedIn">
                                 <a class="btn dropdown-toggle rounded-pill px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                    NFT & Breeding
+                                    NFTs & Breeding
                                 </a>  
                                 <ul class="dropdown-menu mx-4 border-0 shadow">
-                                    <li><a class="dropdown-item" href="/nfts">NFT</a></li>
+                                    <li><a class="dropdown-item" href="/nfts">NFTs</a></li>
                                     <li><a class="dropdown-item" href="/breeding">Breeding</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link rounded-pill px-3" href="/exchange">Trade Center</a>
+                            <a class="nav-link rounded-pill px-3" href="/exchange">Exchange</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none loggedIn">
                             <a class="nav-link rounded-pill px-3" href="/store">Shop</a>
                         </li>
                         <li class="nav-item not-loggedIn">
@@ -101,14 +101,14 @@
                 </li>
                 <li class="nav-item mx-4 my-1">
                     <a class="nav-link rounded-pill px-3 not-loggedIn" href="/nfts"><img src="assets/icon-diamond.svg" class="me-2">
-                        <span class="align-middle">NFT</span>
+                        <span class="align-middle">NFTs</span>
                     </a>
                     <div class="dropdown d-none loggedIn">
                         <a class="btn dropdown-toggle rounded-pill px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                            <img src="assets/icon-diamond.svg" class="me-2"> <span class="align-middle">NFT & Breeding</span>
+                            <img src="assets/icon-diamond.svg" class="me-2"> <span class="align-middle">NFTs & Breeding</span>
                         </a>  
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item rounded-pill px-3" href="/nfts">NFT</a></li>
+                            <li><a class="dropdown-item rounded-pill px-3" href="/nfts">NFTs</a></li>
                             <li><a class="dropdown-item rounded-pill px-3" href="/breeding">Breeding</a></li>
                         </ul>
                     </div>
@@ -225,7 +225,7 @@
                 </div>
             </div>
 
-            <div class="row container-fluid py-0 py-md-4 my-5 text-center d-none loggedIn position-relative" data-aos="fade-down">
+            <div class="row container-fluid py-0 py-md-4 my-5 text-center d-none loggedIn" data-aos="fade-down">
                 <div class="pb-0 pb-md-4">
                     <h1>What's New?</h1>
                     <h5 class="my-4 w-md-75 m-auto">A round up of the latest news and releases.</h5>
@@ -234,41 +234,49 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="text-decoration-none">
-                            <img src="assets/news-1.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">CropBytes soon to launch the much-awaited CBX token sale</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                <div class="card border-0">
+                                    <img src="assets/news1.png" class="card-img-top">
+                                    <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                        <p class="card-title text-start">CropBytes soon to launch the much-awaited CBX token sale</p>
+                                        <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-2.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Trading Simulators and Games for Bitcoin Traders</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="assets/news2.png" class="card-img-top">
+                                <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                    <p class="card-title text-start">Trading Simulators and Games for Bitcoin Traders</p>
+                                    <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                </div>
+                            </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-3.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Crypto Farming Just Got Better!</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="text-decoration-none">
+                                <div class="card border-0">
+                                    <img src="assets/news3.png" class="card-img-top">
+                                    <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                        <p class="card-title text-start">Crypto Farming Just Got Better!</p>
+                                        <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-4.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">GFTB: CropBytes With CEO Sandeep Kumar</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
-                            </a>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <a href="https://blog.cropbytes.com/fishing-mini-game" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-5.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Fishing Mini-Game</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar" target="_blank" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="assets/news4.png" class="card-img-top">
+                                <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                    <p class="card-title text-start">GFTB: CropBytes With CEO Sandeep Kumar</p>
+                                    <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                </div>
+                            </div>
                             </a>
                         </div>
                     </div>
@@ -285,12 +293,12 @@
             <div class="row container-fluid text-center py-0 py-md-4 my-5" data-aos="fade-down">
                 <div class="py-0 py-md-4 pb-md-5">
                     <h1>The Game Experience</h1>
-                <h5 class="my-4 w-md-75 m-auto">Get rewards in crypto as you play and build your skills</h5>
+                <h5 class="my-4 w-75 m-auto">Get rewards in crypto as you play and build your skills</h5>
                 </div>
-                <div class="row pt-md-5 mt-5 g-2">
+                <div class="row pt-md-5 mt-5 g-2 g-xxl-5">
                     <div class="col-12 col-md-6 cryptoworld">
                         <div class="card border-0">
-                            <div class="card-body text-start row p-3 p-md-5 g-0 bg-yellow">
+                            <div class="card-body text-start row p-4 p-md-5 g-0 bg-yellow">
                                 <div class="col-10 col-md-8">
                                     <h3 class="card-title fw-bold text-alternate">Crypto World</h3>
                                     <h5 class="card-text" style="color: #474747;">Learn how to use assets to grow your very own <strong style="color: initial;">#Cryptofarm</strong> into a sucessful crypto business.</h5>
@@ -299,15 +307,15 @@
                                     <img src="assets/cryptoworld.png" class="w-100 floating">
                                 </div>
                             </div>
-                            <a href="/how-to-play" class="btn mt-4 rounded-pill fw-bold p-3 px-5 bg-yellow" style="width: fit-content;">How to Play</a>
+                            <a href="/how-to-play" class="btn mt-4 rounded-pill fw-bold p-3 px-5 bg-yellow" style="width: fit-content; width: -moz-fit-content;">How to Play</a>
                         </div>
                     </div>
     
                     <div class="col-12 col-md-6 pt-md-5 mt-4 mt-md-0 cbxtokens">
                         <div class="card border-0">
-                            <div class="card-body text-start row p-3 p-md-5 g-0">
+                            <div class="card-body text-start row p-4 p-md-5 g-0">
                                 <div class="col-10 col-md-8">
-                                    <h3 class="card-title fw-bold" style="color: #8BF99C;">Earn & Trade In CBX</h3>
+                                    <h3 class="card-title fw-bold" style="color: #8BF99C;">Earn in CBX</h3>
                                     <h5 class="card-text" style="color: #ECECEC;">A virtual world where you can play, contribute to the ecosystem and get CBX tokens.</h5>
                                 </div>
                                 <div class="col-5 asset">
@@ -324,7 +332,10 @@
             <div class="row container-fluid py-0 py-md-4 my-5 mx-2 text-center d-flex justify-center not-loggedIn" data-aos="fade-down">
                 <div class="pb-0 pb-md-4">
                     <h1>A Balanced Economy</h1>
-                    <h5 class="my-4 w-md-75 m-auto">CropBytes is leading the crypto gaming revolution with a beautifully crafted game economy. Use the power of crypto to play and earn in the virtual world.</h5>
+                    <div class="my-4 m-auto">
+                        <h5 class="mb-0 d-inline d-md-block">CropBytes is leading the crypto gaming revolution with a beautifully crafted game economy.</h5>
+                        <h5 class="mb-0 d-inline d-md-block">Use the power of crypto to play and earn in the virtual world.</h5>
+                    </div>
                 </div>
                 <div class="swiper-container economy">
                     <div class="swiper-wrapper">
@@ -332,7 +343,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7002.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Get Assets & Start Farming</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Get assets and start farming</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -340,7 +351,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7003.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Grow Crops & Fruits to Make Food</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Grow crops to make food</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -348,7 +359,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7004.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Feed Animals & Get Extracts</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Feed animals and collect extracts</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -356,7 +367,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7005.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Collect Utilities to Sell</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Collect utilities to use and sell</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -364,7 +375,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7010.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Convert Extracts to Game Coins</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Convert extracts to game coins</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -372,7 +383,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7007.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Trade Assets & Collectibles</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Trade assets and collectibles</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -380,7 +391,7 @@
                             <img src="assets/arrow.png" class="arrow">
                             <div class="card align-items-center justify-content-around h-100">
                                 <img src="assets/Group 7008.png" class="card-img-top floating">
-                                <h6 class="card-title px-5 text-alternate">Generate Returns in Crypto</h6>
+                                <h6 class="card-title px-5 px-md-4 px-xxl-5 text-alternate">Generate returns in crypto</h6>
                             </div>
                             <img src="assets/arrow.png" class="arrow">
                         </div>
@@ -399,7 +410,7 @@
                 <div class="col-12 p-0 pb-4 p-md-0">
                     <div class="pb-0 pb-md-4">
                         <h1>Our Highlights</h1>
-                        <h5 class="my-4 w-md-75 m-auto">We are building one of the most immersive gaming experience. Over the years we have listened to our users and made progressive leaps  in the game.</h5>
+                        <h5 class="my-4 w-md-75 m-auto">Over the last 3 years, we have built one of the most immersive gaming experience. Here are some key features.</h5>
                         <video class="w-100 w-md-75" autoplay muted> <source src="./assets/video.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
                     </div>
                 </div>
@@ -420,7 +431,7 @@
                         </div>
                         <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/utilitybasednft.png" class="card-img-top w-75 w-md-50">
-                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Utility Based NFT</h5>
+                            <h5 class="card-title m-md-2 p-md-2 mt-4 text-alternate">Utility Based NFTs</h5>
                         </div>
                         <div class="col-4 col-md-2 p-2 text-center">
                             <img src="assets/metaverseofgames.png" class="card-img-top w-75 w-md-50">
@@ -443,41 +454,49 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="https://cointelegraph.com/press-releases/cropbytes-soon-to-launch-the-much-awaited-cbx-token-sale" target="_blank" class="text-decoration-none">
-                            <img src="assets/news-1.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">CropBytes soon to launch the much-awaited CBX token sale</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                <div class="card border-0">
+                                    <img src="assets/news1.png" class="card-img-top">
+                                    <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                        <p class="card-title text-start">CropBytes soon to launch the much-awaited CBX token sale</p>
+                                        <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-2.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Trading Simulators and Games for Bitcoin Traders</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://www.theweek.in/news/biz-tech/2020/12/01/trading-simulators-and-games-for-bitcoin-traders.html" target="_blank" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="assets/news2.png" class="card-img-top">
+                                <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                    <p class="card-title text-start">Trading Simulators and Games for Bitcoin Traders</p>
+                                    <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                </div>
+                            </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-3.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Crypto Farming Just Got Better!</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://blog.cropbytes.com/crypto-farming-just-got-better/" target="_blank" class="text-decoration-none">
+                                <div class="card border-0">
+                                    <img src="assets/news3.png" class="card-img-top">
+                                    <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                        <p class="card-title text-start">Crypto Farming Just Got Better!</p>
+                                        <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         
                         <div class="swiper-slide">
-                            <a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-4.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">GFTB: CropBytes With CEO Sandeep Kumar</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
-                            </a>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <a href="https://blog.cropbytes.com/fishing-mini-game" target="_blank" class="text-decoration-none"></a>
-                            <img src="assets/news-5.png" class="card-img-top mb-3">
-                            <p class="card-title text-start">Fishing Mini-Game</p>
-                            <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                            <a href="https://egamers.io/gftb-cropbytes-with-ceo-sandeep-kumar" target="_blank" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="assets/news4.png" class="card-img-top">
+                                <div class="card-body bg-white p-0 p-md-3 mt-3 mt-md-n3">
+                                    <p class="card-title text-start">GFTB: CropBytes With CEO Sandeep Kumar</p>
+                                    <span class="link-primary fw-bold d-none d-md-block text-start">Learn More ></span>
+                                </div>
+                            </div>
                             </a>
                         </div>
                     </div>
@@ -490,33 +509,33 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <img src="assets/marissmith.png" class="rounded-circle mb-4">
-                            <p class="card-text">The best crypto game I have come across. CropBytes is going to be huge!</p>
+                            <p class="card-text w-md-50 m-auto mb-4">CropBytes is a fun farming simulation game with a twist. It's not just about growing crops, but about growing a crypto farm. It's a game where you can grow and trade your goods in an open economy that's powered by crypto. A good strategy will help you make returns!</p>
                             <span class="fw-bold person d-block">Maria Smith</span>
                             <span class="m-0 role d-block">Crypto Trader</span>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/deepamohan.png" class="rounded-circle mb-4">
-                            <p class="card-text">I like farming games, but this is the only game where I have earned by playing.</p>
-                            <span class="fw-bold person d-block">Patricia</span>
-                            <span class="m-0 role d-block">Casual Gamer & Mom</span>
+                            <img src="assets/petehayden.png" class="rounded-circle mb-4">
+                            <p class="card-text w-md-50 m-auto mb-4">Love this game, the graphics are great! it's a crypto game where you have to manage your farm and make decisions. You can earn in crypto if you play smart. I love trading as well, It is pretty cool to be able to sell a game asset when you are not using it. It's also a great way to learn about cryptocurrencies.</p>
+                            <span class="fw-bold person d-block">Pete Hayden</span>
+                            <span class="m-0 role d-block">Gamer</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/louaneberk.png" class="rounded-circle mb-4">
+                            <p class="card-text w-md-50 m-auto mb-4">I first heard about CropBytes from a friend who said it was a fun game with a chance to earn real cryptocurrency. I thought it was a joke at first, but after playing for a while, I realized I could earn real money just for playing. I'm always on the lookout for new and exciting ways to earn money online and this one looks like it's going to be a winner.</p>
+                            <span class="fw-bold person d-block">Louane Berk</span>
+                            <span class="m-0 role d-block">Student</span>
                         </div>
                         <div class="swiper-slide">
                             <img src="assets/ikemercap.png" class="rounded-circle mb-4">
-                            <p class="card-text">This is a great way to generate crypto passively. I have made a good profit so far.</p>
+                            <p class="card-text w-md-50 m-auto mb-4">It's a new and exciting way to farm and earn crypto! I have invested in assets here from which I make regular returns, like staking. I can easily sell my assets for TRX and exchange them for ETH or BTC. Anyone and everyone can play and earn crypto with CropBytes, making it a great opportunity for crypto enthusiasts and newcomers alike.</p>
                             <span class="fw-bold person d-block">Ike Mercap</span>
                             <span class="m-0 role d-block">Streamer</span>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/matt.png" class="rounded-circle mb-4">
-                            <p class="card-text">I've watched this game go from concept to fully functional economy, with more to come.</p>
-                            <span class="fw-bold person d-block">Matt</span>
-                            <span class="m-0 role d-block">Crypto Miner</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/tomlamb.png" class="rounded-circle mb-4">
-                            <p class="card-text">The in-game economy allows players to make a profit by playing. This is the future!</p>
-                            <span class="fw-bold person d-block">Tom Lamb</span>
-                            <span class="m-0 role d-block">Crypto Investor</span>
+                            <img src="assets/patricia.png" class="rounded-circle mb-4">
+                            <p class="card-text w-md-50 m-auto mb-4">Farming games are so much fun, but usually, you can't earn anything for your time. CropBytes changes all that. With this game, you can really earn cryptocurrency by playing. I have doubled my investment in a matter of months, just by playing!</p>
+                            <span class="fw-bold person d-block">Patricia</span>
+                            <span class="m-0 role d-block">Casual Gamer & Mom</span>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>

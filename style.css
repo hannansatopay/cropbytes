@@ -110,6 +110,16 @@ footer .nav-link {
   display: none;
 }
 
+.rellax {
+  transform: rotate(45deg);
+  top: 0px;
+  position: absolute;
+  width: 25px;
+  height: 25px; 
+  z-index: -1;
+  opacity: 0.8;
+}
+
 .btn-check:focus+.btn, .btn:focus {
   outline: none;
   box-shadow: none;
@@ -232,6 +242,10 @@ p {
   font-size: 18px;
 }
 
+.news .card-title {
+  font-size: 16px;
+}
+
 .huge {
   font-size: 50px;
 }
@@ -287,7 +301,7 @@ footer .huge {
 }
 
 .cbxtokens a {
-  background: #8BF99C; width: fit-content;
+  background: #8BF99C; width: fit-content; width: -moz-fit-content;
 }
 
 .cryptoworld .asset {
@@ -327,12 +341,20 @@ footer .huge {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  top: 20%;
+  top: 55px;
 }
 
 @media (min-width: 768px) {
   #navbar {
     display: none !important;
+  }
+
+  .mt-md-n3 {
+    margin-top: -1rem !important;
+  }
+
+  .news {
+    overflow: hidden;
   }
 
   .economy {
@@ -347,19 +369,22 @@ footer .huge {
     min-height: 250px !important;
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    display: none !important;
-    top: 50%;
+  .testimonials .swiper-button-prev, .testimonials .swiper-button-next {
+    opacity: 0.3;
+    top: 50% !important;
   }
 
   .testimonials:hover .swiper-button-prev, .testimonials:hover .swiper-button-next {
-    display: block !important;
-    top: 50%;
+    opacity: 1;
   }
 
   .cryptoworld, .cbxtokens {
     right: 0px;
     top: 0px;
+    margin-top: -5rem;
+  }
+
+  .cbxtokens .asset {
     margin-top: -5rem;
   }
 
@@ -429,6 +454,10 @@ footer .huge {
     font-size: 16px;
   }
 
+  .news .card-title {
+    font-size: 18px;
+  }
+
   .huge {
     font-size: 70px;
     font-family: "Rubik", sans-serif;
@@ -477,8 +506,8 @@ footer .huge {
 
 @media (min-width: 1400px) {
   .container-fluid {
-    padding-left: 10em!important;
-    padding-right: 10em!important;
+    padding-left: 12em!important;
+    padding-right: 12em!important;
   }
 }
 
