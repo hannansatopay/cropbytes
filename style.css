@@ -5,7 +5,7 @@
 * {
   font-family: 'Questrial', sans-serif;
   color: #686868;
-  line-height: 1.4 !important;
+  line-height: 150% !important;
 }
 
 *:focus {
@@ -38,7 +38,7 @@
   }
 }
 
-h1 {
+h1, h2 {
   font-family: "Rubik", sans-serif;
   color: #1D293F;
   font-weight: 500;
@@ -190,6 +190,14 @@ header .dropdown-menu {
   background: #FFDA3A; border-bottom-left-radius: 50px; border-top-right-radius: 50px; top: 1.5rem;
 }
 
+.testimonials .swiper-button-prev, .testimonials .swiper-button-next {
+  opacity: 0.3;
+}
+
+.testimonials:hover .swiper-button-prev, .testimonials:hover .swiper-button-next {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .w-md-100 {
     width: 100% !important;
@@ -277,7 +285,7 @@ footer .huge {
 
 .news img {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
-  border-radius: 20px;
+  border-radius: 24px;
 }
 
 .container-fluid {
@@ -350,7 +358,7 @@ footer .huge {
   }
 
   .mt-md-n3 {
-    margin-top: -1rem !important;
+    margin-top: -1.5rem !important;
   }
 
   .news {
@@ -367,15 +375,6 @@ footer .huge {
 
   .economy .card {
     min-height: 250px !important;
-  }
-
-  .testimonials .swiper-button-prev, .testimonials .swiper-button-next {
-    opacity: 0.3;
-    top: 50% !important;
-  }
-
-  .testimonials:hover .swiper-button-prev, .testimonials:hover .swiper-button-next {
-    opacity: 1;
   }
 
   .cryptoworld, .cbxtokens {
@@ -418,6 +417,10 @@ footer .huge {
     background: #FFDA3A; border-bottom-left-radius: 50px; border-top-right-radius: 50px; top: -50px;
   }
 
+  .testimonials .swiper-button-prev, .testimonials .swiper-button-next {
+    top: 50%!important;
+  }
+
   .healer {
     position: initial;
   }
@@ -427,11 +430,11 @@ footer .huge {
   }
 
   h1 {
-    font-size: 52px;
+    font-size: 72px;
   }
   
   h2 {
-    font-size: 48px;
+    font-size: 52px;
   }
   
   h3 {
@@ -443,7 +446,7 @@ footer .huge {
   }
   
   h5 {
-    font-size: 24px;
+    font-size: 22px;
   }
   
   h6 {
