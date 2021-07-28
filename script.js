@@ -176,7 +176,7 @@ let once = 0;
 $(window).on('resize scroll load', function(){
   if ($('#totaldownloads').isInViewport() && once == 0) {
     once = 1;
-    let totalreach = new countUp.CountUp('totalreach', 80000, {duration: 1, suffix: '+'});
+    let totalreach = new countUp.CountUp('totalreach', 60000, {duration: 1, suffix: '+'});
     let totaldownloads = new countUp.CountUp('totaldownloads', 45, {duration: 1.5, suffix: 'K'});
     totalreach.start();
     totaldownloads.start();
